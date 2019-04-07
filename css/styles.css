@@ -11,6 +11,7 @@ body input {
 }
 html section.home,
 body section.home {
+  display: none;
   width: 7.5rem;
   height: 100%;
   background: url('../images/home_01.png') no-repeat;
