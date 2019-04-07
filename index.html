@@ -11,6 +11,45 @@
     <link rel="stylesheet" href="css/styles.css">
     <!-- <script src="js/less-1.7.0.min.js"></script> -->
     <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/imgLoader.js"></script>
+    <script>
+        imgLoader([
+            'images/bg_01.png',
+            'images/bg_02.png',
+            'images/enter_01.png',
+            'images/enter_02.png',
+            'images/enter_03.png',
+            'images/flower_hui.png',
+            'images/flower_red.png',
+            'images/glory_01.png',
+            'images/glory_02.png',
+            'images/guanggo_01.png',
+            'images/home_01.png',
+            'images/home_02.png',
+            'images/home_03.png',
+            'images/main_01.png',
+            'images/main_02.png',
+            'images/main_banner.png',
+            'images/main_biao.png',
+            'images/main_btn.png',
+            'images/mainflower_01.png',
+            'images/mainflower_02.png',
+            'images/mainflower_03.png',
+            'images/modeltype_01.png',
+            'images/rule_bg.png',
+            'images/rule.png',
+            'images/start.png',
+            'images/tc_03.png'
+        ], function (percentage) {
+            var percentT = percentage * 100;
+            $('.loader_info').html('Loading ' + (parseInt(percentT)) + '%');
+            $('.loader_progress')[0].style.width = percentT + '%';
+            if (percentage == 1) {
+                $('.loader').remove();
+                $('#begin').show();
+            }
+        });
+    </script>
 </head>
 
 <body>
@@ -21,6 +60,13 @@
     <a style="position:absolute;z-index:300;top:2rem;font-weight:bolder;" href="#" class="test_number_flower test6">5朵小红花</a>
     <a style="position:absolute;z-index:300;top:2.5rem;font-weight:bolder;" href="#" class="test_number_flower test7">8朵小红花</a>
     <a style="position:absolute;z-index:300;top:3rem;font-weight:bolder;" href="#" class="test8">恢复首次登陆</a>
+     <!--loading-->
+     <section class="loader">
+        <div class="loader_info"></div>
+        <div>
+            <div class="loader_progress"></div>
+        </div>
+    </section>
     <!-- 首页(开始) -->
     <section class="home">
         <div></div>
