@@ -46,7 +46,14 @@
             $('.loader_progress')[0].style.width = percentT + '%';
             if (percentage == 1) {
                 $('.loader').remove();
-                // $('.home').show();
+                var islogin = localStorage.getItem('islogin')
+                if (islogin != null) {
+                    $('.home').hide()
+                    $('.main').show()
+                } else {
+                    $('.home').show()
+                    localStorage.setItem('islogin',1)
+                }
             }
         });
     </script>

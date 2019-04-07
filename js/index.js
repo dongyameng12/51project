@@ -100,7 +100,7 @@ $(document).ready(function () {
     var increase;
     // 出现劳模类型弹窗（女生）
     var women_number;
-    isLogin();
+    // isLogin();
     // 判断是否首次进入
     function isLogin () {
         var islogin = localStorage.getItem('islogin')
