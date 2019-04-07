@@ -54,7 +54,41 @@ var modeltypeArr = [
         introduction : '我是女生8'  
     },
 ];
-
+// 劳模类型（男生）
+var modelmenArr = [
+    {
+        modeltypeImg : 'images/modeltype_01.png',
+        introduction : '我是男生1'  
+    },
+    {
+        modeltypeImg : 'images/modeltype_01.png',
+        introduction : '我是男生2'  
+    },
+    {
+        modeltypeImg : 'images/modeltype_01.png',
+        introduction : '我是男生3'  
+    },
+    {
+        modeltypeImg : 'images/modeltype_01.png',
+        introduction : '我是男生4'  
+    },
+    {
+        modeltypeImg : 'images/modeltype_01.png',
+        introduction : '我是男生5'  
+    },
+    {
+        modeltypeImg : 'images/modeltype_01.png',
+        introduction : '我是男生6'  
+    },
+    {
+        modeltypeImg : 'images/modeltype_01.png',
+        introduction : '我是男生7'  
+    },
+    {
+        modeltypeImg : 'images/modeltype_01.png',
+        introduction : '我是男生8'  
+    },
+];
 $(document).ready(function () {
     //是否关注公众号
     var attention = true;
@@ -66,7 +100,7 @@ $(document).ready(function () {
     var increase;
     // 出现劳模类型弹窗（女生）
     var women_number;
-    isLogin()
+    isLogin();
     // 判断是否首次进入
     function isLogin () {
         var islogin = localStorage.getItem('islogin')
@@ -98,10 +132,11 @@ $(document).ready(function () {
         var selected_status = $('.select_radio').length;
         submitForm(name,selected_status);
     });
+    var sex
     // 用户信息
     function submitForm (name,selected_status) {
         if (name !== '' && selected_status === 1) {
-            var sex = $('.select_radio').parent('div').siblings('label').text();
+            sex = $('.select_radio').parent('div').siblings('label').text();
             showCard(sex)
         } else {
             if (name === '' && selected_status === 0) {
@@ -119,30 +154,36 @@ $(document).ready(function () {
     function showCard (sex) {
         showMask();
         if (sex === '女') {
-            showModel ();
+            showModel (modeltypeArr);
             $('.worker').show();
             console.log('女');
         } else {
+            showModel (modelmenArr);
+            $('.worker').show();
             console.log('男');
         }  
     }
     
     // 展示劳模类型
-    function showModel () {
+    function showModel (sextArr) {
         women_number = parseInt(Math.random()*7);
         var str = '';
         var str_share = '';
         // for(i = 0; i<modeltypeArr.length;  i++){
         //     str = " <p><span>"+"小胖胖"+"</span>是</p><img src='"+modeltypeArr[i].modeltypeImg +"'><p>"+modeltypeArr[i].introduction+"</p>"
         // }
-        str = " <p><span>"+"小胖胖"+"</span>是</p><img src='"+modeltypeArr[women_number].modeltypeImg +"'><p>"+modeltypeArr[women_number].introduction+"</p>";
-        str_share = " <p><span>"+"小"+"</span>是</p><img src='"+modeltypeArr[women_number].modeltypeImg +"'>";
+        str = " <p><span>"+"小胖胖"+"</span>是</p><img src='"+sextArr[women_number].modeltypeImg +"'><p>"+sextArr[women_number].introduction+"</p>";
+        str_share = " <p><span>"+"小"+"</span>是</p><img src='"+sextArr[women_number].modeltypeImg +"'>";
         $('.model_detail').html(str);
         $('.share_detail').html(str_share);
     }
-    // 劳模种类弹窗换一个
+    // 劳模种类弹窗换一个换一个
     $('#another').on('click',function(){
-        showModel ();
+        if (sex == '男') {
+            showModel(modelmenArr);
+        } else {
+            showModel(modeltypeArr);
+        }
     });
     // 劳模种类弹窗确定
     $('#worker_sure').on('click',function(){
@@ -336,7 +377,8 @@ $(document).ready(function () {
 
     // 恢复首次登陆
     $('.test8').on('click',function () {
-        localStorage.clear()
+        localStorage.clear();
+        window.location.href="index.html?time="+((new Date()).getTime());
     })
 });
 
