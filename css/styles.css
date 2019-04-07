@@ -190,7 +190,7 @@ body section.enter > div:nth-child(3) {
 html section.main,
 body section.main {
   display: none;
-  height: 100%;
+  height: 13.34rem;
 }
 html section.main > div,
 body section.main > div {
