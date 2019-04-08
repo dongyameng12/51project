@@ -431,8 +431,11 @@ $(document).ready(function () {
     function longPress () {
         html2canvas($("#view")[0]).then(function(canvas){
             var imgUri = canvas.toDataURL();
-            $("body").append('<a href="'+imgUri+'" download="下载的图片"  id="saveimg" style="display:none">保存图片</a>');
+            if ($('#saveimg').length == 0) {
+                $("body").append('<a href="'+imgUri+'" download="下载的图片"  id="saveimg" style="display:none">保存图片</a>');
+            }
             document.getElementById("saveimg").click();
+            alert('下载成功')
         })
     }
 });
