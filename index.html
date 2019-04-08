@@ -12,8 +12,9 @@
     <!-- <script src="js/less-1.7.0.min.js"></script> -->
     <script src="js/jquery-1.10.1.min.js"></script>
     <script src="js/imgLoader.js"></script>
+    <script src="js/html2canvas.min.js"></script>
     <script>
-        imgLoader([
+       imgLoader([
             'images/bg_01.png',
             'images/bg_02.png',
             'images/enter_01.png',
@@ -39,7 +40,8 @@
             'images/rule_bg.png',
             'images/rule.png',
             'images/start.png',
-            'images/tc_03.png'
+            'images/tc_03.png',
+            'images/share_01.png'
         ], function (percentage) {
             var percentT = percentage * 100;
             $('.loader_info').html('Loading ' + (parseInt(percentT)) + '%');
@@ -85,10 +87,17 @@
     <section class="enter">
         <div></div>
         <div>
-            <a href="javascript:void(0);"></a>
+            <a href="javascript:void(0);" class="go_rule"></a>
             <div>
                 <input type="text" placeholder="请输入您的名字" class="name">
+                <p class="prompt"></p>
                 <div class="radio_selected">
+                    <div>
+                        <div>
+                            <span></span>
+                        </div>
+                        <label for="">男</label>
+                    </div>
                     <div>
                         <!-- class="select_radio" -->
                         <div>
@@ -96,16 +105,10 @@
                         </div>
                         <label for="">女</label>
                     </div>
-                    <div>
-                        <div>
-                            <span></span>
-                        </div>
-                        <label for="">男</label>
-                    </div>
+                
                 </div>
                 <a href="javascript:void(0);" id="start_test"></a>
             </div>
-
         </div>
         <div></div>
     </section>
@@ -137,11 +140,23 @@
                     <ul>
                         <li>
                             <p>5月1日</p>
-                            <p>
-                                <span>200</span>GB</p>
+                            <p><span>200</span>GB</p>
+                        </li>
+                        <li>
+                            <p>5月1日</p>
+                            <p><span>200</span>GB</p>
+                        </li>
+                        <li>
+                            <p>5月1日</p>
+                            <p><span>200</span>GB</p>
+                        </li>
+                        <li>
+                            <p>5月1日</p>
+                            <p><span>200</span>GB</p>
                         </li>
                     </ul>
                 </div>
+                <div class="return"></div>
                 <div></div>
             </div>
         </div>
@@ -225,8 +240,34 @@
                 </div>
             </div>
         </div>
-        <div class="close">确定</div>
+        <div class="rule_close">确定</div>
     </section>
+    <!-- 绑定手机号 -->
+    <section class="bind">
+            <div></div>
+            <div>
+                <div class="frame">
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                    <div>
+                                        <p>手机号</p>
+                                        <input type="text">
+                                    </div>
+                                    <div>
+                                        <p>验证码</p>
+                                        <input type="text">
+                                        <p></p>                                        
+                                    </div>
+                                    <div class="bind_submit"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     <!-- 劳模种类弹窗 -->
     <section class="pop  worker">
         <div class="frame">
@@ -256,8 +297,10 @@
     </section>
     <!-- 分享 -->
     <section class="pop share">
-        <div></div>
-        <div class="frame">
+        <div>
+            <div></div>
+        </div>
+        <div class="frame" id="view">
             <div>
                 <div>
                     <div>
@@ -279,6 +322,7 @@
                 </div>
             </div>
         </div>
+        <div>长按保存图片</div>
     </section>
     <!-- 本网获得流量弹窗 -->
     <section class="pop tcstyle tc-1">
@@ -301,6 +345,8 @@
         </div>
         <a class="close" href="javascript:void(0)">确定</a>
     </section>
+ 
+
     <!-- 异网流量弹窗 1-->
     <section class="pop tc-2">
         <div>

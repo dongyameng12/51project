@@ -84,6 +84,7 @@ html,body{
                         position: absolute;
                         top: .37rem;
                         right: .35rem;
+                        z-index: 2;
                     } 
                     >div{
                         position: absolute;
@@ -112,6 +113,16 @@ html,body{
                             height: .81rem;
                             background: url('../images/enter_02.png') no-repeat;
                             background-size: cover;
+                        }
+                        >p{
+                            color: #c93f43;
+                            font-size: .24rem;
+                            font-weight: bolder;
+                            width: 4.47rem;
+                            height: .24rem;
+                            margin: 0 auto;
+                            text-align: center;
+                            line-height: .24rem;
                         }
                         >div{
                             font-size: .32rem;
@@ -215,7 +226,7 @@ html,body{
                         &:nth-child(3){
                                 width: 5.84rem;
                                 margin: 0 auto;
-                                padding-top: .4rem;
+                                padding-top: .2rem;
                                 box-sizing: border-box;
                            >ul{
                                 // width: 5.61rem;
@@ -303,6 +314,13 @@ html,body{
                                    } 
                             }
                         &:nth-child(5){
+                            width: 2.74rem;
+                            height: .72rem;
+                            background: url('../images/return.png') no-repeat;
+                            background-size: cover;
+                            margin: .1rem auto;
+                        }
+                        &:nth-child(6){
                             width: 6.69rem;
                             /* height: 100%; */
                             background: url(../images/home_03.png) no-repeat;
@@ -539,7 +557,6 @@ html,body{
                     }
                 }
                 &:nth-child(3){
-                    margin: .5rem auto 0;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -549,7 +566,187 @@ html,body{
                     color: #e4ceae;
                     background-color: #c5252b;
                     font-weight: bolder;
+                    position: relative;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    top: .2rem;
                 }
+            }
+        }
+        // 绑定手机号
+        // 好友入口
+        section.bind{
+            display: none;
+            height: 100%;
+            >div{
+                &:nth-child(1){
+                    width: 7.5rem;
+                    height: 100%;
+                    background: url('../images/home_03.png') no-repeat;
+                    background-size: cover; 
+                    position: absolute;
+                    top: 0;
+                    z-index: 1; 
+                }
+                &:nth-child(2){
+                    width: 7.5rem;
+                    height: 100%;
+                    background: url('../images/home_01.png') no-repeat;
+                    background-size: cover;
+                    >div{
+                        position: relative;
+                        >div{
+                            >div{
+                                >div{
+                                        width:7.06rem;
+                                        height:10.45rem;
+                                        margin:0 auto;
+                                        background: url('../images/bind_01.png') no-repeat;
+                                        background-size: cover;
+                                        position: relative;
+                                        >div{
+                                            width: 5.55rem;
+                                            height: 4.8rem;
+                                            position: absolute;
+                                            left: 0;
+                                            right: 0;
+                                            margin: auto;
+                                            top: 5.5rem;
+                                            z-index: 2;
+                                            >div{
+                                                display: flex;
+                                                align-items: center;
+                                                font-size: .28rem;
+                                                color: #761a19;
+                                                font-weight: bolder;
+                                                &:nth-child(1){
+                                                    // width: 5.02rem;
+                                                    margin: 0 auto;
+                                                    >input{
+                                                        padding-left:1rem;
+                                                        box-sizing: border-box;
+                                                        padding: 0 .2rem;
+                                                        width:3.27rem;
+                                                        height: .8rem;
+                                                        font-size: .24rem;
+                                                        border: none;
+                                                        background:url('../images/enter_01.png') no-repeat;
+                                                        background-size: cover;
+                                                        margin-left: .3rem;
+                                                    }
+                                                }
+                                                &:nth-child(2){
+                                                    // width: 5.02rem;
+                                                    margin: .66rem auto 0;
+                                                    >input{
+                                                        padding-left:1rem;
+                                                        box-sizing: border-box;
+                                                        padding: 0 .2rem;
+                                                        width:2.27rem;
+                                                        height: .8rem;
+                                                        font-size: .24rem;
+                                                        border: none;
+                                                        background:url('../images/enter_01.png') no-repeat;
+                                                        background-size: cover;
+                                                        margin: 0 .15rem 0 .3rem;
+                                                    }
+                                                    >p{
+                                                        &:nth-child(3){
+                                                            width: 1.63rem;
+                                                            height: .8rem;
+                                                            background: url('../images/bind_02.jpg') no-repeat; 
+                                                            background-size: cover;
+                                                        }
+                                                       
+                                                    } 
+                                                }
+                                                &:nth-child(3){
+                                                    width:2.86rem;
+                                                    height: .8rem;
+                                                    background: url('../images/bind_03.png') no-repeat; 
+                                                    background-size: cover;
+                                                    margin: .99rem auto 0; 
+                                                    // background: red;
+                                                }
+                                            }
+                                          
+                                        }
+            
+                               }
+                            }
+                        }
+                    } 
+                     
+                }
+              
+            }
+        }
+        // 好友入口
+        section.fri_home{
+            height: 100%;
+            >div{
+                &:nth-child(1){
+                    width: 7.5rem;
+                    height: 100%;
+                    background: url('../images/home_03.png') no-repeat;
+                    background-size: cover; 
+                    position: absolute;
+                    top: 0;
+                    z-index: 1; 
+                   
+                }
+                &:nth-child(2){
+                    width: 7.5rem;
+                    height: 100%;
+                    background: url('../images/home_01.png') no-repeat;
+                    background-size: cover;
+                    >div{
+                        position: relative;
+                        >div{
+                            >div{
+                               
+                                >div{
+                                    width: 7.06rem;
+                                    height: 10.35rem;
+                                    margin:0 auto;
+                                    background: url('../images/friend_01.png') no-repeat;
+                                    background-size: cover;
+                                     >a{
+                                    display: inline-block;
+                                    &:nth-child(1){
+                                        width: 2.86rem;
+                                        height: .8rem;
+                                        background: url('../images/firend_02.png') no-repeat;
+                                        background-size: cover;
+                                        position: absolute;
+                                        left: 0;
+                                        right: 0;
+                                        margin:auto;
+                                        bottom: .88rem;
+                                        z-index: 2;
+                                    }
+                                    &:nth-child(2){
+                                        display: inline-block;
+                                        width: 2.05rem;
+                                        height: .53rem;
+                                        background: url(../images/rule.png) no-repeat;
+                                        background-size: cover;
+                                        position: absolute;
+                                        top: .37rem;
+                                        right: .35rem;
+                                        z-index: 2;
+                                    }
+                                 
+                                
+                                }
+                               }
+                            }
+                        }
+                    } 
+                     
+                }
+              
             }
         }
         // 弹窗
@@ -645,9 +842,28 @@ html,body{
                     }
                 }
             }
+            // 分享
             &.share{
                 display: none;
+                top: .39rem;
                 >div{
+                    &:nth-child(1){
+                        position: relative;
+                        width: 5.5rem;
+                        height: 1.03rem;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        >div{
+                            width: 3.16rem;
+                            height: 1.03rem;
+                            background: url('../images/share_01.png') no-repeat;
+                            background-size: cover;  
+                            position: absolute;
+                            right: 0;
+                        }
+                   
+                    }
                     &:nth-child(2){
                         width: 5.5rem;
                         margin: 0 auto;
@@ -708,6 +924,61 @@ html,body{
                             }
                         }
                     }
+                    &:nth-child(3){
+                        font-size: .28rem;
+                        color: #e8cba6;
+                        text-align: center;
+                        margin-top: .32rem;
+                    }
+                }
+            }
+            // 好友弹窗
+            &.send_fri{
+                display: none;
+                >div{
+                    width: 5.5rem;
+                    margin: 0 auto;
+                    >div{
+                        >div{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            padding-bottom: .65rem;
+                            >img{
+                                width:4.23rem;
+                            }
+                            >p{
+                                font-size: .24rem;
+                                color: #333;
+                                font-weight: bolder;
+                                &:nth-child(2){
+                                    margin: .4rem auto 0.2rem;
+                                }
+                                &:nth-child(4){
+                                    width: 1.58rem;
+                                    height: 2.25rem;
+                                    background: url(../images/mainflower_01.png) no-repeat;
+                                    background-size: cover;
+                                    margin-top: .65rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                >a{
+                    display: inline-block;
+                    width: 2.86rem;
+                    height: .8rem;
+                    color: #e4ceae;
+                    background-color: #c53034;
+                    text-align: center;
+                    font-size: .24rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: .6rem auto 0;
+                    letter-spacing: .2rem;
+                    font-weight: bolder;
                 }
             }
             // 本网，
@@ -1100,7 +1371,7 @@ html,body{
         }
         // 抽奖
         .lottery{
-            margin: .4rem 0;
+            margin: .2rem 0;
             width: 1.7rem;
             height: .75rem;
             background: url(../images/main_btn.png) no-repeat;
@@ -1141,4 +1412,4 @@ section.loader {
     border-radius: .4em;
     background-color: #f9d0a3;
   }
-             
+         

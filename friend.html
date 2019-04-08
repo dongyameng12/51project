@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>北京移动</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <!-- <link rel="stylesheet/less" href="css/styles.less"> -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- <script src="js/less-1.7.0.min.js"></script> -->
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/imgLoader.js"></script>
+    <script>
+       imgLoader([
+            'images/bg_01.png',
+            'images/bg_02.png',
+            'images/enter_01.png',
+            'images/enter_02.png',
+            'images/enter_03.png',
+            'images/flower_hui.png',
+            'images/flower_red.png',
+            'images/glory_01.png',
+            'images/glory_02.png',
+            'images/guanggo_01.png',
+            'images/home_01.png',
+            'images/home_02.png',
+            'images/home_03.png',
+            'images/main_01.png',
+            'images/main_02.png',
+            'images/main_banner.png',
+            'images/main_biao.png',
+            'images/main_btn.png',
+            'images/mainflower_01.png',
+            'images/mainflower_02.png',
+            'images/mainflower_03.png',
+            'images/modeltype_01.png',
+            'images/rule_bg.png',
+            'images/rule.png',
+            'images/start.png',
+            'images/tc_03.png',
+            'images/share_01.png'
+        ], function (percentage) {
+            var percentT = percentage * 100;
+            $('.loader_info').html('Loading ' + (parseInt(percentT)) + '%');
+            $('.loader_progress')[0].style.width = percentT + '%';
+            if (percentage == 1) {
+                $('.loader').remove();
+                $('.fri_home').show();
+            }
+        });
+    </script>
+</head>
+
+<body>
+     <!--loading-->
+     <section class="loader">
+        <div class="loader_info"></div>
+        <div>
+            <div class="loader_progress"></div>
+        </div>
+    </section>
+    <!--好友入口-->
+    <section class="fri_home">
+        <div></div>
+        <div>
+            <div class="frame">
+                <div>
+                    <div>
+                        <div> 
+                            <a href="javascript:void(0);" id="send"></a>
+                            <a href="javascript:void(0);" class="go_rule"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+    </section>
+    <!-- 好友点亮窗口 -->
+    <section class="pop send_fri">
+        <div class="frame">
+            <div>
+                <div>
+                    <img src="./images/main_02.png" alt="">
+                    <p>成功为好友<span>xx</span> </p>
+                    <p>点亮了一朵小花</p>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <a href="./index.html">参加测试</a>
+    </section>
+    <!-- 活动规则 -->
+    <section class="rule">
+        <div></div>
+        <div class="frame">
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <ul>
+                                <li>1.活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rule_close">确定</div>
+    </section>
+    <!-- 遮罩层 -->
+    <section class="mask" id="mask"></section>
+</body>
+
+</html>
+<script src="js/friend.js"></script>

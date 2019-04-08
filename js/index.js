@@ -99,7 +99,7 @@ $(document).ready(function () {
     //是否转增
     var increase;
     // 出现劳模类型弹窗（女生）
-    var women_number;
+    var women_number = 0;
     // isLogin();
     // 判断是否首次进入
     function isLogin () {
@@ -116,7 +116,7 @@ $(document).ready(function () {
         $('.home').hide();
         $('.enter').show();
     });
-    // 选择男女
+    // 选择
     $('.radio_selected>div').on('click',function(){
         var class_name = $(this).children('div').children('span').prop('class');
         if (class_name !== 'select_radio') {
@@ -133,19 +133,21 @@ $(document).ready(function () {
         submitForm(name,selected_status);
     });
     var sex
-    // 用户信息
+    // 用户填信息
     function submitForm (name,selected_status) {
         if (name !== '' && selected_status === 1) {
             sex = $('.select_radio').parent('div').siblings('label').text();
             showCard(sex)
         } else {
             if (name === '' && selected_status === 0) {
-                console.log('没有填写姓名和选择性别')
+                $('.prompt').text('您还没有填写姓名和性别');
+                // console.log('没有填写姓名和选择性别')
             } else {
                 if (name === '') {
-                    console.log('没有填写姓名')
+                    $('.prompt').text('您还没有没有填写姓名');
+                    // console.log('没有填写姓名')
                 } else {
-                    console.log('没有填写性别')
+                    $('.prompt').text('您还没有没有选择性');
                 }
             }
         }
@@ -165,8 +167,8 @@ $(document).ready(function () {
     }
     
     // 展示劳模类型
-    function showModel (sextArr) {
-        women_number = parseInt(Math.random()*7);
+    function showModel (sextArr) { 
+        // women_number = parseInt(Math.random()*7);
         var str = '';
         var str_share = '';
         // for(i = 0; i<modeltypeArr.length;  i++){
@@ -177,14 +179,26 @@ $(document).ready(function () {
         $('.model_detail').html(str);
         $('.share_detail').html(str_share);
     }
-    // 劳模种类弹窗换一个换一个
+    // 劳模种类弹窗换一个
     $('#another').on('click',function(){
         if (sex == '男') {
-            showModel(modelmenArr);
+            cyclePromblem (modelmenArr);
         } else {
-            showModel(modeltypeArr);
+            cyclePromblem (modeltypeArr);
         }
     });
+    // 循环问题
+    function cyclePromblem (sextArr2) {
+        women_number++; 
+        if(women_number < 8){
+            showModel(sextArr2); 
+        }else{
+            women_number = 0;
+            if(women_number < 8){
+                showModel(sextArr2); 
+            }
+        }
+    }
     // 劳模种类弹窗确定
     $('#worker_sure').on('click',function(){
         $('.worker').hide();
@@ -195,7 +209,7 @@ $(document).ready(function () {
         $('.show_flower').text(flower_number);
         change_flower(flower_number);
     });
-    // 领奖时的弹窗判断
+    // 判断关注，绑定等
     function jiangli () {
         if(attention){
             // 已关注
@@ -216,8 +230,10 @@ $(document).ready(function () {
                     }
                 }
             } else {
+                $('.main').hide();
+                $('.bind').show();
                 // 未绑定手机号
-                alert('你还没绑定手机号');
+                // alert('你还没绑定手机号');
             }
         } else {
             // 未关注
@@ -238,22 +254,18 @@ $(document).ready(function () {
         let rongyu_flower = localStorage.getItem('isclick')
         if (rongyu_flower == null) {
             localStorage.setItem('isclick',true)
-            flower_number++
-            change_flower(flower_number)
+            flower_number++;
+            change_flower(flower_number);
             showMask();
             $('.share').show();
         } else {
-            alert('已经分享')
+            alert('已经分享');
         }
     });
     // 点击分享
     $('.share').on('click',function(){
         hideMask();
         $('.share').hide();
-        // 小花加一（测试用）
-        // flower_number++;
-        // $('.show_flower').text(flower_number);
-        // change_flower(flower_number);
     })
     // 点击抽取最高5.1G
     $('.highest_ext').on('click',function () {
@@ -298,6 +310,11 @@ $(document).ready(function () {
         return rtn;
     }
 
+    // 点击绑定（提交）
+    $('.bind_submit').on('click',function(){
+        $('.bind').hide();
+        $('.main').show();
+    });
     // (转增和取消)
     function Transfcancel () {
      if (increase) {
@@ -349,7 +366,16 @@ $(document).ready(function () {
         hideMask();
     });
 
-
+    // 活动规则
+    $('.go_rule').on('click',function(){
+        $('.enter').hide();
+        $('.rule').show();
+    });
+    // 活动规则确定
+    $('.rule_close').on('click',function(){
+        $('.rule').hide();
+        $('.enter').show();
+    });
     // 测试
     $('.test2').on('click',function(){
         attention = false;
@@ -380,6 +406,34 @@ $(document).ready(function () {
         localStorage.clear();
         window.location.href="index.html?time="+((new Date()).getTime());
     })
+
+    // 长按图片保存方法
+    var timeOutEvent=0;
+    $("#view").on({
+        touchstart: function (e) {
+            timeOutEvent = setTimeout(longPress(), 500);
+            e.preventDefault();
+        },
+        touchmove: function () {
+            clearTimeout(timeOutEvent);
+            timeOutEvent = 0;
+        },
+        touchend: function () {
+            clearTimeout(timeOutEvent);
+            if (timeOutEvent != 0) {
+                // alert("你这是点击，不是长按"); 
+            }
+            return false;
+        }
+    })
+
+    function longPress () {
+        html2canvas(document.getElementById('view'), {
+            onrendered: function(canvas) {
+                document.body.appendChild(canvas);
+            },
+        });
+    }
 });
 
 //显示遮罩层
