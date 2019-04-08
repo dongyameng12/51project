@@ -412,6 +412,7 @@ $(document).ready(function () {
     $("#view").on({
         touchstart: function (e) {
             timeOutEvent = setTimeout(longPress(), 500);
+            console.log('adfadfa')
             e.preventDefault();
         },
         touchmove: function () {
@@ -428,11 +429,11 @@ $(document).ready(function () {
     })
 
     function longPress () {
-        html2canvas(document.getElementById('view'), {
-            onrendered: function(canvas) {
-                document.body.appendChild(canvas);
-            },
-        });
+        html2canvas($("#view")[0]).then(function(canvas){
+            var imgUri = canvas.toDataURL();
+            $("body").append('<a href="'+imgUri+'" download="下载的图片"  id="saveimg" style="display:none">保存图片</a>');
+            document.getElementById("saveimg").click();
+        })
     }
 });
 
