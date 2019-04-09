@@ -114,16 +114,6 @@ html,body{
                             background: url('../images/enter_02.png') no-repeat;
                             background-size: cover;
                         }
-                        >p{
-                            color: #c93f43;
-                            font-size: .24rem;
-                            font-weight: bolder;
-                            width: 4.47rem;
-                            height: .24rem;
-                            margin: 0 auto;
-                            text-align: center;
-                            line-height: .24rem;
-                        }
                         >div{
                             font-size: .32rem;
                             color: #c93f43;
@@ -191,7 +181,7 @@ html,body{
         section.main{
             display: none;
             height: 13.34rem;
-            >div{
+            >div{   
                 height: 100%;
                 >div{
                     height: 100%;
@@ -294,7 +284,7 @@ html,body{
                                     margin: auto;
                                     height: 1.89rem;
                                     top: 2.03rem;
-                                    overflow-y: scroll;
+                                    overflow-y: hidden;
                                     >li{
                                         display: flex;
                                         justify-content: center;
@@ -319,6 +309,8 @@ html,body{
                             background: url('../images/return.png') no-repeat;
                             background-size: cover;
                             margin: .1rem auto;
+                            position: relative;
+                            z-index: 2;
                         }
                         &:nth-child(6){
                             width: 6.69rem;
@@ -842,6 +834,63 @@ html,body{
                     }
                 }
             }
+            // 分享前弹窗
+            &.share_before{
+                display: none;
+                width: 5.5rem;
+                height: 5rem;
+                >div{
+                    >div{
+                        >div{
+                            position: relative;
+                            box-sizing: border-box;
+                            margin: 0 auto;
+                            height: 5rem;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            >p{
+                                &:nth-child(1){
+                                    >img{
+                                        width: 4.27rem;
+                                        margin: 0  auto;
+                                    }
+                                }
+                            }
+                            >div{
+                                flex: 1;
+                                font-size: .24rem;
+                                color: #333;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                >p{
+                                    line-height: .5rem;
+                                    &:nth-child(1){
+                                        font-size: .32rem;
+                                        margin-bottom: .5rem;
+                                        color: #932322;
+                                    }
+                                }
+                              
+                            }
+                        }
+                    }
+                }
+                >a{
+                    margin: .5rem auto 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 2.86rem;
+                    height: .8rem;
+                    font-size: .32rem;
+                    color: #e4ceae;
+                    background-color: #264ba0;
+                    font-weight: bolder;
+                }
+            }
             // 分享
             &.share{
                 display: none;
@@ -865,7 +914,10 @@ html,body{
                    
                     }
                     &:nth-child(2){
+                        >div{
+                                // 生成最终图片
                         width: 5.5rem;
+                        // height: 8rem;
                         margin: 0 auto;
                         >div{
                             >div{
@@ -912,17 +964,14 @@ html,body{
                                                 font-size: .24rem;
                                                 font-weight: bolder;    
                                             }
-                                            &:nth-child(2){
-                                                width: 1.13rem;
-                                                height: 1.13rem;
-                                                background-color: #0e4b77;
-                                            }
                                         }
                                     }
                                 }
                              
                             }
                         }
+                        }
+                    
                     }
                     &:nth-child(3){
                         font-size: .28rem;
@@ -979,6 +1028,96 @@ html,body{
                     margin: .6rem auto 0;
                     letter-spacing: .2rem;
                     font-weight: bolder;
+                }
+            }
+            // 未领奖励
+            &.unling{
+                display: none;
+                >div{
+                    &:nth-child(1){
+                        width: 5.5rem;
+                        margin: 0 auto;
+                        height: 5rem;
+                        >div{
+                            height: 100%;
+                            >div{
+                                height: 100%;
+                                >div{
+                                    height: 100%;
+                                    >p{
+                                        font-size: .24rem;
+                                        line-height: .5rem;
+                                        text-align: center;
+                                        >img{
+                                            width: 4.27rem;
+                                        }
+                                    }
+                                }
+                               
+                            }
+                        }
+                    }
+                    &:nth-child(2){
+                        margin: .5rem auto 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 2.86rem;
+                        height: .8rem;
+                        font-size: .32rem;
+                        color: #e4ceae;
+                        background-color: #264ba0;
+                        font-weight: bolder;
+                    }
+                }
+            }
+            // 姓名性别弹窗
+            &.sex_name{
+                display: none;
+                >div{
+                    &:nth-child(1){
+                        width: 5.5rem;
+                        margin: 0 auto;
+                        height: 5rem;
+                        >div{
+                            height: 100%;
+                            >div{
+                                height: 100%;
+                                >div{
+                                    height: 100%;
+                                    >p{
+                                        font-size: .24rem;
+                                        line-height: .5rem;
+                                        text-align: center;
+                                        >img{
+                                            width: 4.27rem;
+                                        }
+                                        &:nth-child(2){
+                                            height: 3rem;
+                                            line-height: 3rem;
+                                            font-size: .32rem;
+                                            color: #932322;
+                                            font-weight: bolder;
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+                               
+                            }
+                        }
+                    }
+                    &:nth-child(2){
+                        margin: .5rem auto 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 2.86rem;
+                        height: .8rem;
+                        font-size: .32rem;
+                        color: #e4ceae;
+                        background-color: #932322;  
+                        font-weight: bolder;
+                    }
                 }
             }
             // 本网，
@@ -1318,6 +1457,7 @@ html,body{
                         font-weight: bolder;
                     }
                 }
+
             }
         // 弹窗共同样式
         .tcstyle{
@@ -1412,4 +1552,9 @@ section.loader {
     border-radius: .4em;
     background-color: #f9d0a3;
   }
+  #qrcode img{
+      width:1.13rem;
+      height: 1.13rem;
+  }
+
          

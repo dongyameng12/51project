@@ -102,15 +102,17 @@ $(document).ready(function () {
     var women_number = 0;
     // isLogin();
     // 判断是否首次进入
-    function isLogin () {
-        var islogin = localStorage.getItem('islogin')
-        if (islogin != null) {
-            $('.home').hide()
-            $('.main').show()
-        } else {
-            localStorage.setItem('islogin',1)
-        }
-    }
+    // function isLogin () {
+    //     var islogin = localStorage.getItem('islogin')
+    //     if (islogin != null) {  
+    //         if (getQueryVariable('test') != 1) {
+    //             $('.home').hide()
+    //             $('.main').show()
+    //         }
+    //     } else {
+    //         localStorage.setItem('islogin',1)
+    //     }
+    // }
     // 点击首页开始按钮
     $('#start').on('click',function(){
         $('.home').hide();
@@ -141,13 +143,19 @@ $(document).ready(function () {
         } else {
             if (name === '' && selected_status === 0) {
                 $('.prompt').text('您还没有填写姓名和性别');
+                showMask();
+                $('.sex_name').show();
                 // console.log('没有填写姓名和选择性别')
             } else {
                 if (name === '') {
-                    $('.prompt').text('您还没有没有填写姓名');
+                    $('.prompt').text('您还没有填写姓名');
+                    showMask();
+                    $('.sex_name').show();
                     // console.log('没有填写姓名')
                 } else {
-                    $('.prompt').text('您还没有没有选择性');
+                    $('.prompt').text('您还没有选择性别');
+                    showMask();
+                    $('.sex_name').show();
                 }
             }
         }
@@ -205,8 +213,6 @@ $(document).ready(function () {
         hideMask();
         $('.enter').hide();
         $('.glory').show();
-        flower_number++;
-        $('.show_flower').text(flower_number);
         change_flower(flower_number);
     });
     // 判断关注，绑定等
@@ -255,12 +261,16 @@ $(document).ready(function () {
         if (rongyu_flower == null) {
             localStorage.setItem('isclick',true)
             flower_number++;
+            $('.show_flower').text(flower_number)
             change_flower(flower_number);
-            showMask();
-            $('.share').show();
-        } else {
-            alert('已经分享');
-        }
+        } 
+        showMask();
+        $('.share_before').show();
+    });
+    // 分享前发送好友按钮
+    $('.shareb_btn').on('click',function(){
+        $('.share_before').hide();
+        $('.share').show();
     });
     // 点击分享
     $('.share').on('click',function(){
@@ -269,29 +279,35 @@ $(document).ready(function () {
     })
     // 点击抽取最高5.1G
     $('.highest_ext').on('click',function () {
-        if (!flower_status) {
-            flower_number++
-            change_flower(flower_number)
-        }
-        $('.frame').hide()
-        $('.main').show()
+        $('.glory').hide();
+        $('.main').show();
     })
     
     // 点击抽取
     $('.lottery').on('click',function () {
         if ($(this).hasClass('one_flower')) {
-            current_clickclass = '.one_flower'
-            jiangli()
+            if (flower_number <1) {
+                $('#unflower').text('1');
+                showMask();
+                $('.unling').show();
+            } else {
+                current_clickclass = '.one_flower'
+                jiangli();
+            }
         }else if ($(this).hasClass('five_flower')) {
             if (flower_number < 5) {
-                alert('小于5')
+                $('#unflower').text('5');
+                showMask();
+                $('.unling').show();
             } else {
                 current_clickclass = '.five_flower'
                 jiangli()
             }
         }else if ($(this).hasClass('eight_flower')) {
             if (flower_number < 8) {
-                alert('小于8')
+                $('#unflower').text('8');
+                showMask();
+                $('.unling').show();
             } else {
                 current_clickclass = '.eight_flower'
                 jiangli()
@@ -315,6 +331,11 @@ $(document).ready(function () {
         $('.bind').hide();
         $('.main').show();
     });
+    // 点击主页返回
+    $('.return').on('click',function(){
+        $('.main').hide();
+        $('.glory').show();
+    })
     // (转增和取消)
     function Transfcancel () {
      if (increase) {
@@ -376,6 +397,16 @@ $(document).ready(function () {
         $('.rule').hide();
         $('.enter').show();
     });
+    // 未领奖的确定按钮
+    $('.unsure').on('click',function(){
+        $('.unling').hide();
+        $('.share').show();
+    });
+    // 姓名性别确定
+    $('.sex_btn').on('click',function(){
+        hideMask();
+      $('.sex_name').hide();  
+    })
     // 测试
     $('.test2').on('click',function(){
         attention = false;
@@ -407,38 +438,29 @@ $(document).ready(function () {
         window.location.href="index.html?time="+((new Date()).getTime());
     })
 
-    // 长按图片保存方法
-    var timeOutEvent=0;
-    $("#view").on({
-        touchstart: function (e) {
-            timeOutEvent = setTimeout(longPress(), 500);
-            console.log('adfadfa')
-            e.preventDefault();
-        },
-        touchmove: function () {
-            clearTimeout(timeOutEvent);
-            timeOutEvent = 0;
-        },
-        touchend: function () {
-            clearTimeout(timeOutEvent);
-            if (timeOutEvent != 0) {
-                // alert("你这是点击，不是长按"); 
-            }
-            return false;
-        }
+  
+    //生成专属海报按钮
+    $('.make-btn').on('click',function () {
+        generateImage();
     })
-
-    function longPress () {
-        html2canvas($("#view")[0]).then(function(canvas){
-            var imgUri = canvas.toDataURL();
-            if ($('#saveimg').length == 0) {
-                $("body").append('<a href="'+imgUri+'" download="下载的图片"  id="saveimg" style="display:none">保存图片</a>');
-            }
-            document.getElementById("saveimg").click();
-            alert('下载成功')
-        })
-    }
 });
+
+function generateImage () {
+    var copyDom = $('#pic')[0]
+    var width = copyDom.offsetWidth;
+    var height = copyDom.offsetHeight;
+    var scale = 2;
+    html2canvas(document.getElementById('pic'),{
+        dpi:window.devicePixelRatio*2,
+        scale:scale,
+        width:width,
+        height:height,
+    }).then(function(canvas){
+        var imgUrl = canvas.toDataURL();
+        $('.getimg').css({'width':width,'height':height,'margin':'0 auto'})
+        $('.getimg').html('<img src="'+imgUrl+'" style="width:'+width+'px;height:'+height+'px">');
+    })
+}
 
 //显示遮罩层
 function showMask() {
@@ -451,4 +473,15 @@ function showMask() {
 function hideMask() {
     $("#mask").hide();
     $('body').css('position', 'unset');
+}
+// 获取url参数
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
 }
