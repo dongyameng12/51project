@@ -444,7 +444,7 @@ $(document).ready(function () {
         generateImage();
     })
 });
-
+// 生成图片方法
 function generateImage () {
     var copyDom = $('#pic')[0]
     var width = copyDom.offsetWidth;
