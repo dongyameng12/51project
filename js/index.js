@@ -266,11 +266,13 @@ $(document).ready(function () {
         } 
         showMask();
         $('.share_before').show();
+        
     });
     // 分享前发送好友按钮
     $('.shareb_btn').on('click',function(){
         $('.share_before').hide();
         $('.share').show();
+        generateImage()
     });
     // 点击分享
     $('.share').on('click',function(){
@@ -401,6 +403,7 @@ $(document).ready(function () {
     $('.unsure').on('click',function(){
         $('.unling').hide();
         $('.share').show();
+        generateImage()
     });
     // 姓名性别确定
     $('.sex_btn').on('click',function(){
@@ -440,9 +443,10 @@ $(document).ready(function () {
 
   
     //生成专属海报按钮
-    $('.make-btn').on('click',function () {
-        generateImage();
-    })
+    // $('.make-btn').on('click',function () {
+    //     debugger
+    //     generateImage();
+    // })
 });
 // 生成图片方法
 function generateImage () {
@@ -461,6 +465,7 @@ function generateImage () {
         $('.getimg').html('<img src="'+imgUrl+'" style="width:'+width+'px;height:'+height+'px">');
     })
 }
+
 
 //显示遮罩层
 function showMask() {
