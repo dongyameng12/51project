@@ -275,9 +275,15 @@ $(document).ready(function () {
         generateImage()
     });
     // 点击分享
-    $('.share').on('click',function(){
-        hideMask();
-        $('.share').hide();
+    // $('.share').on('click',function(){
+    //     hideMask();
+    //     $('.share').hide();
+    // })
+    $('.mask').on('click',function(){
+        if ($('.share').css('display') == 'block') {
+            hideMask();
+            $('.share').hide();
+        }
     })
     // 点击抽取最高5.1G
     $('.highest_ext').on('click',function () {
