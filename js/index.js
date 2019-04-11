@@ -208,7 +208,7 @@ $(document).ready(function () {
         }
     }
     // 劳模种类弹窗确定
-    $('#worker_sure').on('click',function(){
+    $('#worker_sure').on('click touchstart',function(){
         $('.worker').hide();
         hideMask();
         $('.enter').hide();
