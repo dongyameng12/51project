@@ -512,6 +512,18 @@ body section.glory > div > div > div:nth-child(5) > div:nth-child(3) > ul > li >
   font-size: .28rem;
   color: #333;
 }
+html section.glory > a,
+body section.glory > a {
+  display: inline-block;
+  width: 2.05rem;
+  height: .53rem;
+  background: url(../images/rule.png) no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: .37rem;
+  right: .35rem;
+  z-index: 2;
+}
 html section.rule,
 body section.rule {
   display: none;
