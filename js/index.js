@@ -188,7 +188,7 @@ $(document).ready(function () {
         $('.share_detail').html(str_share);
     }
     // 劳模种类弹窗换一个
-    $('#another').on('click',function(){
+    $('#another').on('click touchstart',function(){
         if (sex == '男') {
             cyclePromblem (modelmenArr);
         } else {
@@ -208,7 +208,7 @@ $(document).ready(function () {
         }
     }
     // 劳模种类弹窗确定
-    $('#worker_sure').on('click ',function(){
+    $('#worker_sure').on('click touchstart',function(){
         $('.worker').hide();
         hideMask();
         $('.enter').hide();
