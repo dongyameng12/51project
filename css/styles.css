@@ -1625,3 +1625,6 @@ section.loader > div:nth-child(2) div {
 .cavas_img {
   cursor: pointer;
 }
+.worker_sure {
+  cursor: pointer;
+}
