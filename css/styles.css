@@ -820,8 +820,6 @@ body section.pop.worker > div:nth-child(1) > div > div > div:nth-child(2) > img 
 }
 html section.pop.worker > div:nth-child(2),
 body section.pop.worker > div:nth-child(2) {
-  display: flex;
-  justify-content: space-between;
   width: 5.5rem;
   margin: .2rem auto;
 }
