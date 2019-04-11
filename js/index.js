@@ -441,29 +441,26 @@ $(document).ready(function () {
         window.location.href="index.html?time="+((new Date()).getTime());
     })
 
-  
-    //生成专属海报按钮
-    // $('.make-btn').on('click',function () {
-    //     debugger
-    //     generateImage();
-    // })
 });
 // 生成图片方法
 function generateImage () {
-    var copyDom = $('#pic')[0]
-    var width = copyDom.offsetWidth;
-    var height = copyDom.offsetHeight;
-    var scale = 2;
-    html2canvas(document.getElementById('pic'),{
-        dpi:window.devicePixelRatio*2,
-        scale:scale,
-        width:width,
-        height:height,
-    }).then(function(canvas){
-        var imgUrl = canvas.toDataURL();
-        $('.getimg').css({'width':width,'height':height,'margin':'0 auto'})
-        $('.getimg').html('<img src="'+imgUrl+'" style="width:'+width+'px;height:'+height+'px">');
-    })
+    var getimg_length = $('.getimg').children('img').length
+    if (getimg_length == 0) {
+        var copyDom = $('#pic')[0]
+        var width = copyDom.offsetWidth;
+        var height = copyDom.offsetHeight;
+        var scale = 2;
+        html2canvas(document.getElementById('pic'),{
+            dpi:window.devicePixelRatio*2,
+            scale:scale,
+            width:width,
+            height:height,
+        }).then(function(canvas){
+            var imgUrl = canvas.toDataURL();
+            $('.getimg').css({'width':width,'height':height,'margin':'0 auto'})
+            $('.getimg').html('<img class="cavas_img" src="'+imgUrl+'" style="width:'+width+'px;height:'+height+'px">');
+        })
+    }
 }
 
 

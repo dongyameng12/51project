@@ -1622,3 +1622,6 @@ section.loader > div:nth-child(2) div {
   width: 1.13rem;
   height: 1.13rem;
 }
+.cavas_img {
+  cursor: pointer;
+}
