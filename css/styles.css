@@ -1627,4 +1627,5 @@ section.loader > div:nth-child(2) div {
 }
 .worker_sure {
   cursor: pointer;
+  z-index: 999999;
 }
