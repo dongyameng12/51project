@@ -580,17 +580,18 @@ body section.rule > div:nth-child(2) > div > div > div > div:nth-child(1) {
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 html section.rule > div:nth-child(2) > div > div > div > div:nth-child(1) > ul,
 body section.rule > div:nth-child(2) > div > div > div > div:nth-child(1) > ul {
   overflow: scroll;
   text-align: justify;
   height: 98%;
+  font-size: .24rem;
 }
 html section.rule > div:nth-child(2) > div > div > div > div:nth-child(1) > ul > li,
 body section.rule > div:nth-child(2) > div > div > div > div:nth-child(1) > ul > li {
   line-height: .5rem;
+  margin: .1rem 0;
 }
 html section.rule > div:nth-child(2) > div > div > div > div:nth-child(2),
 body section.rule > div:nth-child(2) > div > div > div > div:nth-child(2) {
@@ -599,11 +600,10 @@ body section.rule > div:nth-child(2) > div > div > div > div:nth-child(2) {
   justify-content: center;
   width: 2.86rem;
   height: .8rem;
-  font-size: .32rem;
   background: url('../images/sure.png') no-repeat;
   background-size: cover;
   position: absolute;
-  bottom: .75rem;
+  bottom: .6rem;
   margin: auto;
   left: 0;
   right: 0;
@@ -838,25 +838,25 @@ body section.pop.worker > div:nth-child(2) > div > p {
   color: #e1c9a6;
   margin-bottom: .2rem;
 }
-html section.pop.worker > div:nth-child(2) > div > a,
-body section.pop.worker > div:nth-child(2) > div > a {
-  display: inline-block;
+html section.pop.worker > div:nth-child(2) > div > button,
+body section.pop.worker > div:nth-child(2) > div > button {
   height: .8rem;
   box-sizing: border-box;
   font-size: .32rem;
   font-weight: bolder;
   text-align: center;
   width: 2.4rem;
+  border: 0;
 }
-html section.pop.worker > div:nth-child(2) > div:nth-child(1) > a,
-body section.pop.worker > div:nth-child(2) > div:nth-child(1) > a {
+html section.pop.worker > div:nth-child(2) > div:nth-child(1) > button,
+body section.pop.worker > div:nth-child(2) > div:nth-child(1) > button {
   border: solid .04rem #c22528;
   color: #c22528;
   line-height: .7rem;
   background-color: #e1c9a6;
 }
-html section.pop.worker > div:nth-child(2) > div:nth-child(2) > a,
-body section.pop.worker > div:nth-child(2) > div:nth-child(2) > a {
+html section.pop.worker > div:nth-child(2) > div:nth-child(2) > button,
+body section.pop.worker > div:nth-child(2) > div:nth-child(2) > button {
   background-color: #c22528;
   color: #e1c9a6;
   line-height: .8rem;
@@ -1625,10 +1625,7 @@ section.loader > div:nth-child(2) div {
   width: 1.13rem;
   height: 1.13rem;
 }
-.cavas_img {
-  cursor: pointer;
-}
-.worker_sure {
-  cursor: pointer;
-  z-index: 999999;
+.fontsize {
+  font-size: .28rem;
+  font-weight: bolder;
 }

@@ -505,9 +505,6 @@ html,body{
         section.rule{
             display: none;
             width: 7.5rem;
-            // height: 100%;
-            // background: url('../images/home_01.png') no-repeat;
-            // background-size: cover;
             position: fixed;
             left: 0;
             right: 0;
@@ -551,14 +548,14 @@ html,body{
                                         box-sizing: border-box;
                                         display: flex;
                                         align-items: center;
-                                        justify-content: center;
                                         >ul{
                                             overflow: scroll;
-                                           
                                             text-align: justify;
                                             height:98%;
+                                            font-size: .24rem;
                                             >li{
                                                 line-height: .5rem;
+                                                margin: .1rem 0;
                                             }
                                         }
                                       
@@ -569,11 +566,10 @@ html,body{
                                         justify-content: center;
                                         width: 2.86rem;
                                         height: .8rem;
-                                        font-size: .32rem;
                                         background: url('../images/sure.png') no-repeat;
                                         background-size: cover;
                                         position: absolute;
-                                        bottom: .75rem;
+                                        bottom: .6rem;
                                         margin: auto;
                                         left: 0;
                                         right: 0;
@@ -840,25 +836,25 @@ html,body{
                                 color: #e1c9a6;
                                 margin-bottom: .2rem;
                             }
-                            >a{
-                                display: inline-block;
+                             >button{
                                 height: .8rem;
                                 box-sizing: border-box;
                                 font-size: .32rem;
                                 font-weight: bolder;
                                 text-align: center;
                                 width: 2.4rem;
+                                border: 0;
                             }
                             &:nth-child(1){
-                               >a{
+                                >button{
                                     border: solid .04rem #c22528;
                                     color:#c22528; 
                                     line-height: .7rem;
-                                  background-color: #e1c9a6;  
+                                background-color: #e1c9a6;  
                                 }
                             }
                             &:nth-child(2){
-                                >a{
+                                 >button{
                                     background-color: #c22528;
                                     color:#e1c9a6; 
                                     line-height:.8rem;
@@ -1592,12 +1588,9 @@ section.loader {
       width:1.13rem;
       height: 1.13rem;
   }
-  .cavas_img {
-      cursor: pointer;
+  
+  .fontsize{
+    font-size: .28rem;
+    font-weight: bolder;
   }
-  .worker_sure{
-    cursor:pointer; 
-    z-index: 999999;
-  }
-
          
