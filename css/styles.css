@@ -3,6 +3,7 @@ body {
   background-color: #f9d0a3;
   height: 100%;
   color: #333;
+  user-select: none;
   /* 遮罩层 */
 }
 html input,

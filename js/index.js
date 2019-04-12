@@ -422,9 +422,11 @@ $(document).ready(function () {
         if (class_test.includes('6')) {
             flower_number = 5;
             change_flower(flower_number);
+            $('.show_flower').text(flower_number);
         } else if (class_test.includes('7')) {
             flower_number = 8;
             change_flower(flower_number);
+            $('.show_flower').text(flower_number);
         }
     })
 
