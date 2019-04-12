@@ -50,7 +50,8 @@
             'images/share_01.png',
             'images/start.png',
             'images/tc_03.png',
-            'images/share_01.png'
+            'images/share_01.png',
+            'images/attention_01.png'
         ], function (percentage) {
             var percentT = percentage * 100;
             $('.loader_info').html('Loading ' + (parseInt(percentT)) + '%');
@@ -279,6 +280,26 @@
                 </div>
             </div>
         </div>
+    </section>
+    <!-- 关注-->
+    <section class="attention">
+            <div></div>
+            <div class="frame">
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <p>亲爱的用户，劳动光荣</p>
+                                <p> 快来测测你是什么类型的劳动人民吧～</p>
+                                <p id='attention_code'></p>
+                                <p>长按图片-识别图中二维码-关注公众号 </p>
+                                <p>在【优惠】菜单中可参与活动哦～ </p>
+                            </div>
+                         
+                        </div>
+                    </div>
+                </div>
+            </div> 
     </section>
     <!-- 绑定手机号 -->
     <section class="bind">
@@ -536,6 +557,8 @@
     <section class="mask" id="mask"></section>
     <script>
           new QRCode(document.getElementById("qrcode"), "http://www.baidu.com");
+        //   关注二维码
+        new QRCode(document.getElementById("attention_code"), "http://www.baidu.com");
     </script>
 </body>
 

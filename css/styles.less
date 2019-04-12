@@ -598,6 +598,63 @@ html,body{
                 }
             }
         }
+
+        // 关注页面
+        section.attention{
+            display: none;
+            width: 7.5rem;
+            height: 100%;
+            background: url('../images/home_01.png') no-repeat;
+            background-size: cover;
+            >div{
+                &:nth-child(1){
+                    width: 7.5rem;
+                    height: 100%;
+                    background: url('../images/home_03.png') no-repeat;
+                    background-size: cover;
+                    position: absolute;
+                    top: 0;
+                }
+                &:nth-child(2){
+                    width: 7.5rem;
+                    height: 11.4rem;
+                    >div{
+                        height: 100%;
+                        >div{
+                            height: 100%;
+                            >div{
+                                width: 7rem;
+                                height: 10.54rem;
+                                background: url('../images/attention_01.png') no-repeat;
+                                background-size: cover;
+                                margin: 0 auto;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-content: center;
+                                >div{
+                                   width: 5.27;
+                                   height: 7.25rem;
+                                   margin: 0 auto;
+                                   font-size: .28rem;
+                                   font-weight: bolder;
+                                   >p{
+                                       text-align: center;
+                                       line-height: .65rem;
+                                       &:nth-child(3){
+                                           width: 3.8rem;
+                                           height: 3.8rem;
+                                           margin: .33rem auto;
+                                       }
+                                   }
+                                }
+                             
+                            }
+                        }
+                    }
+                }
+            }
+        }
         // 绑定手机号
         // 好友入口
         section.bind{
@@ -1588,7 +1645,10 @@ section.loader {
       width:1.13rem;
       height: 1.13rem;
   }
-  
+  #attention_code img{
+    width:3.8rem;
+    height: 3.8rem;
+  }
   .fontsize{
     font-size: .28rem;
     font-weight: bolder;

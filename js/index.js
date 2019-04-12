@@ -229,7 +229,8 @@ $(document).ready(function () {
         } else {
             // 未关注
             // alert('未关注');
-            window.location.href = "https://mp.weixin.qq.com/s/L5sqfIUePU0ZWzL_eVwr_A";
+            $('.main').hide();
+           $('.attention').show();
         }
     };
 
