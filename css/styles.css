@@ -81,18 +81,6 @@ body section.enter > div:nth-child(2) {
   background-size: cover;
   position: relative;
 }
-html section.enter > div:nth-child(2) > a,
-body section.enter > div:nth-child(2) > a {
-  display: inline-block;
-  width: 2.05rem;
-  height: .53rem;
-  background: url('../images/rule.png') no-repeat;
-  background-size: cover;
-  position: absolute;
-  top: .37rem;
-  right: .35rem;
-  z-index: 2;
-}
 html section.enter > div:nth-child(2) > div,
 body section.enter > div:nth-child(2) > div {
   position: absolute;
@@ -188,6 +176,18 @@ body section.enter > div:nth-child(3) {
   right: 0;
   margin: auto;
   top: .41rem;
+}
+html section.enter > a,
+body section.enter > a {
+  display: inline-block;
+  width: 2.05rem;
+  height: .53rem;
+  background: url('../images/rule.png') no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: .37rem;
+  right: .35rem;
+  z-index: 2;
 }
 html section.main,
 body section.main {
@@ -360,11 +360,12 @@ body section.glory > div > div {
 }
 html section.glory > div > div > div:nth-child(1),
 body section.glory > div > div > div:nth-child(1) {
-  width: 4.55rem;
-  height: .39rem;
+  width: 5.65rem;
+  height: 1.25rem;
   background: url('../images/glory_01.png') no-repeat;
   background-size: cover;
-  margin: 0 auto;
+  position: relative;
+  left: .17rem;
 }
 html section.glory > div > div > div:nth-child(2),
 body section.glory > div > div > div:nth-child(2) {
@@ -528,9 +529,12 @@ html section.rule,
 body section.rule {
   display: none;
   width: 7.5rem;
-  height: 100%;
-  background: url('../images/home_01.png') no-repeat;
-  background-size: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  z-index: 201;
 }
 html section.rule > div:nth-child(1),
 body section.rule > div:nth-child(1) {
@@ -563,8 +567,8 @@ body section.rule > div:nth-child(2) > div > div > div {
   position: relative;
   z-index: 2;
 }
-html section.rule > div:nth-child(2) > div > div > div > div,
-body section.rule > div:nth-child(2) > div > div > div > div {
+html section.rule > div:nth-child(2) > div > div > div > div:nth-child(1),
+body section.rule > div:nth-child(2) > div > div > div > div:nth-child(1) {
   width: 6.14rem;
   height: 6.6rem;
   position: absolute;
@@ -578,32 +582,31 @@ body section.rule > div:nth-child(2) > div > div > div > div {
   align-items: center;
   justify-content: center;
 }
-html section.rule > div:nth-child(2) > div > div > div > div > ul,
-body section.rule > div:nth-child(2) > div > div > div > div > ul {
+html section.rule > div:nth-child(2) > div > div > div > div:nth-child(1) > ul,
+body section.rule > div:nth-child(2) > div > div > div > div:nth-child(1) > ul {
   overflow: scroll;
   text-align: justify;
   height: 98%;
 }
-html section.rule > div:nth-child(2) > div > div > div > div > ul > li,
-body section.rule > div:nth-child(2) > div > div > div > div > ul > li {
+html section.rule > div:nth-child(2) > div > div > div > div:nth-child(1) > ul > li,
+body section.rule > div:nth-child(2) > div > div > div > div:nth-child(1) > ul > li {
   line-height: .5rem;
 }
-html section.rule > div:nth-child(3),
-body section.rule > div:nth-child(3) {
+html section.rule > div:nth-child(2) > div > div > div > div:nth-child(2),
+body section.rule > div:nth-child(2) > div > div > div > div:nth-child(2) {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 2.86rem;
   height: .8rem;
   font-size: .32rem;
-  color: #e4ceae;
-  background-color: #c5252b;
-  font-weight: bolder;
-  position: relative;
+  background: url('../images/sure.png') no-repeat;
+  background-size: cover;
+  position: absolute;
+  bottom: .75rem;
+  margin: auto;
   left: 0;
   right: 0;
-  margin: auto;
-  top: .2rem;
 }
 html section.bind,
 body section.bind {
@@ -774,7 +777,7 @@ html section.pop,
 body section.pop {
   position: fixed;
   top: 1.13rem;
-  width: 7.5rem;
+  width: 5.5rem;
   z-index: 200;
   left: 0;
   right: 0;
@@ -820,6 +823,8 @@ body section.pop.worker > div:nth-child(1) > div > div > div:nth-child(2) > img 
 }
 html section.pop.worker > div:nth-child(2),
 body section.pop.worker > div:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
   width: 5.5rem;
   margin: .2rem auto;
 }

@@ -99,20 +99,7 @@ $(document).ready(function () {
     //是否转增
     var increase;
     // 出现劳模类型弹窗（女生）
-    var women_number = 0;
-    // isLogin();
-    // 判断是否首次进入
-    // function isLogin () {
-    //     var islogin = localStorage.getItem('islogin')
-    //     if (islogin != null) {  
-    //         if (getQueryVariable('test') != 1) {
-    //             $('.home').hide()
-    //             $('.main').show()
-    //         }
-    //     } else {
-    //         localStorage.setItem('islogin',1)
-    //     }
-    // }
+    var  women_number = parseInt(Math.random()*7);
     // 点击首页开始按钮
     $('#start').on('click',function(){
         $('.home').hide();
@@ -188,7 +175,7 @@ $(document).ready(function () {
         $('.share_detail').html(str_share);
     }
     // 劳模种类弹窗换一个
-    $('#another').on('click touchstart',function(){
+    $('#another').on('click',function(){
         if (sex == '男') {
             cyclePromblem (modelmenArr);
         } else {
@@ -202,13 +189,11 @@ $(document).ready(function () {
             showModel(sextArr2); 
         }else{
             women_number = 0;
-            if(women_number < 8){
-                showModel(sextArr2); 
-            }
+            showModel(sextArr2); 
         }
     }
     // 劳模种类弹窗确定
-    $('#worker_sure').on('click touchend',function(){
+    $('#worker_sure').on('click',function(){
         $('.worker').hide();
         hideMask();
         $('.enter').hide();
@@ -397,13 +382,13 @@ $(document).ready(function () {
 
     // 活动规则
     $('.go_rule').on('click',function(){
-        $('.enter').hide();
+        showMask();
         $('.rule').show();
     });
     // 活动规则确定
     $('.rule_close').on('click',function(){
         $('.rule').hide();
-        $('.enter').show();
+        hideMask();
     });
     // 未领奖的确定按钮
     $('.unsure').on('click',function(){

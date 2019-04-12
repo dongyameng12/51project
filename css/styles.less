@@ -75,17 +75,6 @@ html,body{
                     background: url('../images/enter_03.png') no-repeat;
                     background-size: cover;
                     position: relative;
-                    >a{
-                        display: inline-block;
-                        width: 2.05rem;
-                        height: .53rem;
-                        background: url('../images/rule.png') no-repeat;
-                        background-size: cover;
-                        position: absolute;
-                        top: .37rem;
-                        right: .35rem;
-                        z-index: 2;
-                    } 
                     >div{
                         position: absolute;
                         bottom: 1.09rem;
@@ -176,6 +165,17 @@ html,body{
                     top: .41rem;
                 }
             }
+            >a{
+                display: inline-block;
+                width: 2.05rem;
+                height: .53rem;
+                background: url('../images/rule.png') no-repeat;
+                background-size: cover;
+                position: absolute;
+                top: .37rem;
+                right: .35rem;
+                z-index: 2;
+            } 
         }
         // 主页
         section.main{
@@ -342,11 +342,13 @@ html,body{
                     height: 100%;
                     >div{
                         &:nth-child(1){
-                            width: 4.55rem;
-                            height: .39rem;
+                            width: 5.65rem;
+                            height: 1.25rem;
                             background: url('../images/glory_01.png') no-repeat;
                             background-size: cover;
-                            margin: 0 auto;
+                            position: relative;
+                            left: .17rem;
+                           
                         }
                         &:nth-child(2){
                             width: 4rem;
@@ -503,9 +505,15 @@ html,body{
         section.rule{
             display: none;
             width: 7.5rem;
-            height: 100%;
-            background: url('../images/home_01.png') no-repeat;
-            background-size: cover;
+            // height: 100%;
+            // background: url('../images/home_01.png') no-repeat;
+            // background-size: cover;
+            position: fixed;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 0;
+            z-index: 201;
             >div{
                 &:nth-child(1){
                     width: 7.5rem;
@@ -530,49 +538,67 @@ html,body{
                                 position: relative;
                                 z-index: 2;
                                 >div{
-                                    width: 6.14rem;
-                                    height: 6.6rem;
-                                    // border: solid 1px red;
-                                    position: absolute;
-                                    left: 0;
-                                    right: 0;
-                                    margin: auto;
-                                    top: 2.5rem;
-                                    padding: .2rem;
-                                    box-sizing: border-box;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    >ul{
-                                        overflow: scroll;
-                                       
-                                        text-align: justify;
-                                        height:98%;
-                                        >li{
-                                            line-height: .5rem;
+                                    &:nth-child(1){
+                                        width: 6.14rem;
+                                        height: 6.6rem;
+                                        // border: solid 1px red;
+                                        position: absolute;
+                                        left: 0;
+                                        right: 0;
+                                        margin: auto;
+                                        top: 2.5rem;
+                                        padding: .2rem;
+                                        box-sizing: border-box;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        >ul{
+                                            overflow: scroll;
+                                           
+                                            text-align: justify;
+                                            height:98%;
+                                            >li{
+                                                line-height: .5rem;
+                                            }
                                         }
+                                      
                                     }
-                                  
+                                    &:nth-child(2){
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        width: 2.86rem;
+                                        height: .8rem;
+                                        font-size: .32rem;
+                                        background: url('../images/sure.png') no-repeat;
+                                        background-size: cover;
+                                        position: absolute;
+                                        bottom: .75rem;
+                                        margin: auto;
+                                        left: 0;
+                                        right: 0;
+                                    }
                                 }
+                             
                             }
                         }
                     }
                 }
                 &:nth-child(3){
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 2.86rem;
-                    height: .8rem;
-                    font-size: .32rem;
-                    color: #e4ceae;
-                    background-color: #c5252b;
-                    font-weight: bolder;
-                    position: relative;
-                    left: 0;
-                    right: 0;
-                    margin: auto;
-                    top: .2rem;
+                    // display: flex;
+                    // align-items: center;
+                    // justify-content: center;
+                    // width: 2.86rem;
+                    // height: .8rem;
+                    // font-size: .32rem;
+                    // color: #e4ceae;
+                    // background-color: #c5252b;
+                    // font-weight: bolder;
+                    // position: relative;
+                    // left: 0;
+                    // right: 0;
+                    // margin: auto;
+                    // top: .2rem;
                 }
             }
         }
@@ -755,7 +781,7 @@ html,body{
         section.pop{
             position: fixed;
             top: 1.13rem;
-            width: 7.5rem;
+            width: 5.5rem;
             z-index: 200;
             left: 0;
             right: 0;
@@ -803,8 +829,8 @@ html,body{
                         }
                     }
                     &:nth-child(2){
-                        // display: flex;
-                        // justify-content: space-between;
+                        display: flex;
+                        justify-content: space-between;
                         width: 5.5rem;
                         margin: .2rem auto;
                         >div{
