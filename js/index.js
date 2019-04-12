@@ -198,7 +198,6 @@ $(document).ready(function () {
         hideMask();
         $('.enter').hide();
         $('.glory').show();
-        change_flower(flower_number);
     });
     // 判断关注，绑定等
     function jiangli () {
@@ -229,8 +228,7 @@ $(document).ready(function () {
         } else {
             // 未关注
             // alert('未关注');
-            $('.main').hide();
-           $('.attention').show();
+             window.location.href = "https://mp.weixin.qq.com/s/FDD5Q57SnOrWAiYkfyzLFQ";
         }
     };
 
@@ -422,9 +420,11 @@ $(document).ready(function () {
         flower_status = true
         var class_test = $(this).prop('class')
         if (class_test.includes('6')) {
-            flower_number = 5
+            flower_number = 5;
+            change_flower(flower_number);
         } else if (class_test.includes('7')) {
-            flower_number = 8
+            flower_number = 8;
+            change_flower(flower_number);
         }
     })
 

@@ -608,67 +608,6 @@ body section.rule > div:nth-child(2) > div > div > div > div:nth-child(2) {
   left: 0;
   right: 0;
 }
-html section.attention,
-body section.attention {
-  display: none;
-  width: 7.5rem;
-  height: 100%;
-  background: url('../images/home_01.png') no-repeat;
-  background-size: cover;
-}
-html section.attention > div:nth-child(1),
-body section.attention > div:nth-child(1) {
-  width: 7.5rem;
-  height: 100%;
-  background: url('../images/home_03.png') no-repeat;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-}
-html section.attention > div:nth-child(2),
-body section.attention > div:nth-child(2) {
-  width: 7.5rem;
-  height: 11.4rem;
-}
-html section.attention > div:nth-child(2) > div,
-body section.attention > div:nth-child(2) > div {
-  height: 100%;
-}
-html section.attention > div:nth-child(2) > div > div,
-body section.attention > div:nth-child(2) > div > div {
-  height: 100%;
-}
-html section.attention > div:nth-child(2) > div > div > div,
-body section.attention > div:nth-child(2) > div > div > div {
-  width: 7rem;
-  height: 10.54rem;
-  background: url('../images/attention_01.png') no-repeat;
-  background-size: cover;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-}
-html section.attention > div:nth-child(2) > div > div > div > div,
-body section.attention > div:nth-child(2) > div > div > div > div {
-  width: 5.27;
-  height: 7.25rem;
-  margin: 0 auto;
-  font-size: .28rem;
-  font-weight: bolder;
-}
-html section.attention > div:nth-child(2) > div > div > div > div > p,
-body section.attention > div:nth-child(2) > div > div > div > div > p {
-  text-align: center;
-  line-height: .65rem;
-}
-html section.attention > div:nth-child(2) > div > div > div > div > p:nth-child(3),
-body section.attention > div:nth-child(2) > div > div > div > div > p:nth-child(3) {
-  width: 3.8rem;
-  height: 3.8rem;
-  margin: .33rem auto;
-}
 html section.bind,
 body section.bind {
   display: none;
