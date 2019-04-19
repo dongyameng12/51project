@@ -26,7 +26,7 @@ html,body{
                     top: 0;
                     z-index: 1;
                 }
-               &:nth-child(2){
+            &:nth-child(2){
                     width: 7.33rem;
                     height: 11.34rem;
                     background: url('../images/home_02.png') no-repeat;
@@ -47,6 +47,11 @@ html,body{
                         z-index: 2;
                     }
                 }
+            }
+            &:nth-child(3){
+                width:6.26rem;
+                height: 2.36rem;
+                box-sizing: border-box;
             }
 
         }
@@ -365,6 +370,9 @@ html,body{
                                     font-weight: bolder;
                                     width: 4.55rem;
                                     margin: .4rem auto;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
                                 }
                                 &:nth-child(3){
                                     width: 4rem;
@@ -932,23 +940,25 @@ html,body{
                     &:nth-child(1){
                         position: relative;
                         width: 5.5rem;
-                        height: 1.03rem;
+                        height: 1.7rem;
                         left: 0;
                         right: 0;
                         margin: auto;
                         >div{
-                            width: 3.16rem;
-                            height: 1.03rem;
+                            width: 5.90rem;
+                            height: 1.46rem;
                             background: url('../images/share_01.png') no-repeat;
                             background-size: cover;  
                             position: absolute;
+                            left: 0;
                             right: 0;
+                            margin: auto;
                         }
                    
                     }
                     &:nth-child(2){
                         >div{
-                                // 生成最终图片
+                        // 生成最终图片
                         width: 5.5rem;
                         // height: 8rem;
                         margin: 0 auto;
@@ -968,7 +978,9 @@ html,body{
                                             font-weight: bolder;
                                             width: 4.55rem;
                                             margin: .4rem auto;
-                                         
+                                            overflow: hidden;
+                                            white-space: nowrap;
+                                            text-overflow: ellipsis;
                                         }
                                         >img{
                                             width: 4rem;
@@ -1597,4 +1609,5 @@ section.loader {
     font-size: .28rem;
     font-weight: bolder;
   }
+
          

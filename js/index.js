@@ -153,11 +153,9 @@ $(document).ready(function () {
         if (sex === '女') {
             showModel (modeltypeArr);
             $('.worker').show();
-            console.log('女');
         } else {
             showModel (modelmenArr);
             $('.worker').show();
-            console.log('男');
         }  
     }
     
@@ -166,11 +164,13 @@ $(document).ready(function () {
         // women_number = parseInt(Math.random()*7);
         var str = '';
         var str_share = '';
+        var nickname = $('.name').val();
+        // utf16toEntities(nickname);
         // for(i = 0; i<modeltypeArr.length;  i++){
         //     str = " <p><span>"+"小胖胖"+"</span>是</p><img src='"+modeltypeArr[i].modeltypeImg +"'><p>"+modeltypeArr[i].introduction+"</p>"
         // }
-        str = " <p><span>"+"小胖胖"+"</span>是</p><img src='"+sextArr[women_number].modeltypeImg +"'><p>"+sextArr[women_number].introduction+"</p>";
-        str_share = " <p><span>"+"小"+"</span>是</p><img src='"+sextArr[women_number].modeltypeImg +"'>";
+        str = " <p><span>"+nickname+"</span></p><img src='"+sextArr[women_number].modeltypeImg +"'><p>"+sextArr[women_number].introduction+"</p>";
+        str_share = " <p><span>"+nickname+"</span></p><img src='"+sextArr[women_number].modeltypeImg +"'>";
         $('.model_detail').html(str);
         $('.share_detail').html(str_share);
     }
@@ -483,3 +483,41 @@ function getQueryVariable(variable)
        }
        return(false);
 }
+// 获取表情
+// function utf16toEntities(str) { 
+//     var patt=/[\ud800-\udbff][\udc00-\udfff]/g; // 检测utf16字符正则 
+//     str = str.replace(patt, function(char){ 
+//             var H, L, code; 
+//             if (char.length===2) { 
+//                 H = char.charCodeAt(0); // 取出高位 
+//                 L = char.charCodeAt(1); // 取出低位 
+//                 code = (H - 0xD800) * 0x400 + 0x10000 + L - 0xDC00; // 转换算法 
+//                 return "&#" + code + ";"; 
+//             } else { 
+//                 return char; 
+//             } 
+//         }); 
+//     return str; 
+// }
+/**
+ *
+ *
+ *用于反解开EMOJI编码后的字符串
+ *
+ *
+ * */
+// function uncodeUtf16(str){
+//     var reg = /\&#.*?;/g;
+//     var result = str.replace(reg,function(char){
+//         var H,L,code;
+//         if(char.length == 9 ){
+//             code = parseInt(char.match(/[0-9]+/g));
+//             H = Math.floor((code-0x10000) / 0x400)+0xD800;
+//             L = (code - 0x10000) % 0x400 + 0xDC00;
+//             return unescape("%u"+H.toString(16)+"%u"+L.toString(16));
+//         }else{
+//             return char;
+//         }
+//     });
+//     return result;
+// }
