@@ -382,7 +382,6 @@ body section.glory > div > div > div:nth-child(2) {
 html section.glory > div > div > div:nth-child(2) > img,
 body section.glory > div > div > div:nth-child(2) > img {
   width: 4rem;
-  height: .74rem;
 }
 html section.glory > div > div > div:nth-child(2) > p,
 body section.glory > div > div > div:nth-child(2) > p {
@@ -393,16 +392,10 @@ body section.glory > div > div > div:nth-child(2) > p:nth-child(1) {
   font-size: .24rem;
   font-weight: bolder;
   width: 4.55rem;
-  margin: .4rem auto;
+  margin: .1rem auto;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-html section.glory > div > div > div:nth-child(2) > p:nth-child(3),
-body section.glory > div > div > div:nth-child(2) > p:nth-child(3) {
-  width: 4rem;
-  height: 3rem;
-  border: solid 1px red;
 }
 html section.glory > div > div > div:nth-child(3),
 body section.glory > div > div > div:nth-child(3) {
@@ -802,34 +795,9 @@ body section.pop.worker {
   width: 5.5rem;
   display: none;
 }
-html section.pop.worker > div:nth-child(1) > div > div > div:nth-child(1),
-body section.pop.worker > div:nth-child(1) > div > div > div:nth-child(1) {
-  width: 4.27rem;
-  margin: 0 auto;
-}
-html section.pop.worker > div:nth-child(1) > div > div > div:nth-child(1) img,
-body section.pop.worker > div:nth-child(1) > div > div > div:nth-child(1) img {
-  width: 4.27rem;
-}
-html section.pop.worker > div:nth-child(1) > div > div > div:nth-child(2) > p:nth-child(1),
-body section.pop.worker > div:nth-child(1) > div > div > div:nth-child(2) > p:nth-child(1) {
-  font-size: .24rem;
-  font-weight: bolder;
-  width: 4.55rem;
-  margin: .4rem auto;
-}
-html section.pop.worker > div:nth-child(1) > div > div > div:nth-child(2) > p:nth-child(3),
-body section.pop.worker > div:nth-child(1) > div > div > div:nth-child(2) > p:nth-child(3) {
-  width: 4rem;
-  height: 3rem;
-  margin: 0 auto .2rem;
-}
-html section.pop.worker > div:nth-child(1) > div > div > div:nth-child(2) > img,
-body section.pop.worker > div:nth-child(1) > div > div > div:nth-child(2) > img {
-  width: 4rem;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
+html section.pop.worker > div:nth-child(1) > img,
+body section.pop.worker > div:nth-child(1) > img {
+  width: 5.5rem;
 }
 html section.pop.worker > div:nth-child(2),
 body section.pop.worker > div:nth-child(2) {
@@ -969,7 +937,7 @@ body section.pop.share > div:nth-child(2) > div > div > div > div:nth-child(2) >
   font-size: .24rem;
   font-weight: bolder;
   width: 4.55rem;
-  margin: .4rem auto;
+  margin: .2rem auto;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -986,7 +954,6 @@ body section.pop.share > div:nth-child(2) > div > div > div > div:nth-child(3) {
   font-size: .24rem;
   font-weight: bolder;
   text-align: center;
-  margin: .2rem auto 3.05rem;
 }
 html section.pop.share > div:nth-child(2) > div > div > div > div:nth-child(4),
 body section.pop.share > div:nth-child(2) > div > div > div > div:nth-child(4) {

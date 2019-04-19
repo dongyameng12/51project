@@ -22,70 +22,70 @@ var current_clickclass // 判断当前点击是哪个class
 // 劳模类型（女生）
 var modeltypeArr = [
     {
-        modeltypeImg : 'images/modeltype_01.png',
+        modeltypeImg : 'images/women_00.jpg',
         introduction : '我是女生1'  
     },
     {
-        modeltypeImg : 'images/modeltype_01.png',
+        modeltypeImg : 'images/women_01.jpg',
         introduction : '我是女生2'  
     },
     {
-        modeltypeImg : 'images/modeltype_01.png',
+        modeltypeImg : 'images/women_02.jpg',
         introduction : '我是女生3'  
     },
     {
-        modeltypeImg : 'images/modeltype_01.png',
+        modeltypeImg : 'images/women_03.jpg',
         introduction : '我是女生4'  
     },
     {
-        modeltypeImg : 'images/modeltype_01.png',
+        modeltypeImg : 'images/women_04.jpg',
         introduction : '我是女生5'  
     },
     {
-        modeltypeImg : 'images/modeltype_01.png',
+        modeltypeImg : 'images/women_05.jpg',
         introduction : '我是女生6'  
     },
     {
-        modeltypeImg : 'images/modeltype_01.png',
+        modeltypeImg : 'images/women_06.jpg',
         introduction : '我是女生7'  
     },
     {
-        modeltypeImg : 'images/modeltype_01.png',
+        modeltypeImg : 'images/women_07.jpg',
         introduction : '我是女生8'  
     },
 ];
 // 劳模类型（男生）
 var modelmenArr = [
     {
-        modeltypeImg : 'images/modeltype_01.png',
+        modeltypeImg : 'images/men_00.jpg',
         introduction : '我是男生1'  
     },
     {
-        modeltypeImg : 'images/modeltype_01.png',
+        modeltypeImg : 'images/men_01.jpg',
         introduction : '我是男生2'  
     },
     {
-        modeltypeImg : 'images/modeltype_01.png',
+        modeltypeImg : 'images/men_02.jpg',
         introduction : '我是男生3'  
     },
     {
-        modeltypeImg : 'images/modeltype_01.png',
+        modeltypeImg : 'images/men_03.jpg',
         introduction : '我是男生4'  
     },
     {
-        modeltypeImg : 'images/modeltype_01.png',
+        modeltypeImg : 'images/men_04.jpg',
         introduction : '我是男生5'  
     },
     {
-        modeltypeImg : 'images/modeltype_01.png',
+        modeltypeImg : 'images/men_05.jpg',
         introduction : '我是男生6'  
     },
     {
-        modeltypeImg : 'images/modeltype_01.png',
+        modeltypeImg : 'images/men_06.jpg',
         introduction : '我是男生7'  
     },
     {
-        modeltypeImg : 'images/modeltype_01.png',
+        modeltypeImg : 'images/men_07.jpg',
         introduction : '我是男生8'  
     },
 ];
@@ -169,9 +169,11 @@ $(document).ready(function () {
         // for(i = 0; i<modeltypeArr.length;  i++){
         //     str = " <p><span>"+"小胖胖"+"</span>是</p><img src='"+modeltypeArr[i].modeltypeImg +"'><p>"+modeltypeArr[i].introduction+"</p>"
         // }
-        str = " <p><span>"+nickname+"</span></p><img src='"+sextArr[women_number].modeltypeImg +"'><p>"+sextArr[women_number].introduction+"</p>";
+        str = " <img src='"+sextArr[women_number].modeltypeImg +"'>";
+        // str_list =" <p><span>"+nickname+"</span></p><img src='"+sextArr[women_number].modeltypeImg +"'>"
         str_share = " <p><span>"+nickname+"</span></p><img src='"+sextArr[women_number].modeltypeImg +"'>";
         $('.model_detail').html(str);
+        // $('.model_detail_list').html(str_list);
         $('.share_detail').html(str_share);
     }
     // 劳模种类弹窗换一个
@@ -483,41 +485,3 @@ function getQueryVariable(variable)
        }
        return(false);
 }
-// 获取表情
-// function utf16toEntities(str) { 
-//     var patt=/[\ud800-\udbff][\udc00-\udfff]/g; // 检测utf16字符正则 
-//     str = str.replace(patt, function(char){ 
-//             var H, L, code; 
-//             if (char.length===2) { 
-//                 H = char.charCodeAt(0); // 取出高位 
-//                 L = char.charCodeAt(1); // 取出低位 
-//                 code = (H - 0xD800) * 0x400 + 0x10000 + L - 0xDC00; // 转换算法 
-//                 return "&#" + code + ";"; 
-//             } else { 
-//                 return char; 
-//             } 
-//         }); 
-//     return str; 
-// }
-/**
- *
- *
- *用于反解开EMOJI编码后的字符串
- *
- *
- * */
-// function uncodeUtf16(str){
-//     var reg = /\&#.*?;/g;
-//     var result = str.replace(reg,function(char){
-//         var H,L,code;
-//         if(char.length == 9 ){
-//             code = parseInt(char.match(/[0-9]+/g));
-//             H = Math.floor((code-0x10000) / 0x400)+0xD800;
-//             L = (code - 0x10000) % 0x400 + 0xDC00;
-//             return unescape("%u"+H.toString(16)+"%u"+L.toString(16));
-//         }else{
-//             return char;
-//         }
-//     });
-//     return result;
-// }
