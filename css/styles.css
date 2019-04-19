@@ -739,20 +739,38 @@ html section.fri_home > div:nth-child(2) > div,
 body section.fri_home > div:nth-child(2) > div {
   position: relative;
 }
-html section.fri_home > div:nth-child(2) > div > div > div > div,
-body section.fri_home > div:nth-child(2) > div > div > div > div {
+html section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(1),
+body section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(1) {
+  position: absolute;
+  top: 5.6rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 5.7rem;
+  text-align: center;
+  margin: 0 auto;
+  font-size: .3rem;
+  font-weight: bolder;
+  color: #333;
+}
+html section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(1) > p,
+body section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(1) > p {
+  line-height: .56rem;
+}
+html section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(2),
+body section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(2) {
   width: 7.06rem;
   height: 10.35rem;
   margin: 0 auto;
   background: url('../images/friend_01.png') no-repeat;
   background-size: cover;
 }
-html section.fri_home > div:nth-child(2) > div > div > div > div > a,
-body section.fri_home > div:nth-child(2) > div > div > div > div > a {
+html section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(2) > a,
+body section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(2) > a {
   display: inline-block;
 }
-html section.fri_home > div:nth-child(2) > div > div > div > div > a:nth-child(1),
-body section.fri_home > div:nth-child(2) > div > div > div > div > a:nth-child(1) {
+html section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(2) > a:nth-child(1),
+body section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(2) > a:nth-child(1) {
   width: 2.86rem;
   height: .8rem;
   background: url('../images/firend_02.png') no-repeat;
@@ -764,8 +782,8 @@ body section.fri_home > div:nth-child(2) > div > div > div > div > a:nth-child(1
   bottom: .88rem;
   z-index: 2;
 }
-html section.fri_home > div:nth-child(2) > div > div > div > div > a:nth-child(2),
-body section.fri_home > div:nth-child(2) > div > div > div > div > a:nth-child(2) {
+html section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(2) > a:nth-child(2),
+body section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(2) > a:nth-child(2) {
   display: inline-block;
   width: 2.05rem;
   height: .53rem;
