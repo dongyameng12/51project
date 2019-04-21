@@ -716,6 +716,7 @@ body section.bind > div:nth-child(2) > div > div > div > div > div > div:nth-chi
 }
 html section.fri_home,
 body section.fri_home {
+  display: none;
   height: 100%;
 }
 html section.fri_home > div:nth-child(1),

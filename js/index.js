@@ -173,7 +173,6 @@ $(document).ready(function () {
         // str_list =" <p><span>"+nickname+"</span></p><img src='"+sextArr[women_number].modeltypeImg +"'>"
         str_share = " <p><span>"+nickname+"</span></p><img src='"+sextArr[women_number].modeltypeImg +"'>";
         $('.model_detail').html(str);
-        // $('.model_detail_list').html(str_list);
         $('.share_detail').html(str_share);
     }
     // 劳模种类弹窗换一个
