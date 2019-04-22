@@ -222,11 +222,18 @@ body section.main > div > div {
 }
 html section.main > div > div > div:nth-child(1),
 body section.main > div > div > div:nth-child(1) {
-  width: 6.69rem;
+  margin: 0 auto;
+  width: 6.68rem;
+}
+html section.main > div > div > div:nth-child(1) > a,
+body section.main > div > div > div:nth-child(1) > a {
+  display: inline-block;
+  width: 6.68rem;
   height: 1.57rem;
-  background: url('../images/main_banner.png') no-repeat;
+  background: url('../images/main_banner.gif') no-repeat;
   background-size: cover;
-  margin: .2rem auto;
+  position: relative;
+  z-index: 100;
 }
 html section.main > div > div > div:nth-child(2),
 body section.main > div > div > div:nth-child(2) {

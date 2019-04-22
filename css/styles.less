@@ -203,11 +203,18 @@ html,body{
                     height: 100%;
                     >div{
                         &:nth-child(1){
-                          width: 6.69rem;
-                          height: 1.57rem;
-                          background: url('../images/main_banner.png') no-repeat;
-                          background-size: cover;
-                          margin: .2rem auto;
+                            margin: 0 auto;
+                            width: 6.68rem;
+                            >a{
+                                display: inline-block;
+                                width: 6.68rem;
+                                height: 1.57rem;
+                                background: url('../images/main_banner.gif') no-repeat;
+                                background-size: cover;
+                                position: relative;
+                                z-index: 100;
+                            }
+                         
                         }
                         &:nth-child(2){
                             width: 6.04rem;
