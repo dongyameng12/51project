@@ -895,10 +895,24 @@ html,body{
                                 justify-content: center;
                                 >p{
                                     line-height: .5rem;
-                                    &:nth-child(1){
+                                    &:nth-child(1),&:nth-child(2){
                                         font-size: .32rem;
-                                        margin-bottom: .5rem;
                                         color: #932322;
+                                    }
+                                    &:nth-child(2){
+                                        margin-bottom: .5rem;
+                                        display: flex;
+                                        align-items: center;
+                                        >img{
+                                            width: .6rem;
+                                        }
+                                    }
+                                    &:nth-child(5){
+                                        >span{
+                                            font-size: .32rem;
+                                            color: #932322;
+                                            font-weight: bolder; 
+                                        }
                                     }
                                 }
                               
@@ -1595,5 +1609,7 @@ section.loader {
     font-size: .28rem;
     font-weight: bolder;
   }
-
+.clickios{
+    cursor: pointer;
+}
          

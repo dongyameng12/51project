@@ -401,27 +401,29 @@ $(document).ready(function () {
     })
     // 测试
     $('.test2').on('click',function(){
+        $('.test2').css('color','red');
         attention = false;
     });
     $('.test3').on('click',function(){
+        $('.test3').css('color','red');
         binding = false;
     });
     $('.test4').on('click',function(){
+        $('.test4').css('color','red');
         CM = false;
     });
-    $('.d1').on('click',function(){
-        alert(1)
-    });
-
+   
     // 测试展示几朵小红花
     $('.test_number_flower').on('click',function () {
         flower_status = true
         var class_test = $(this).prop('class')
         if (class_test.includes('6')) {
+            $('.test6').css('color','red');
             flower_number = 5;
             change_flower(flower_number);
             $('.show_flower').text(flower_number);
         } else if (class_test.includes('7')) {
+            $('.test7').css('color','red');
             flower_number = 8;
             change_flower(flower_number);
             $('.show_flower').text(flower_number);
@@ -430,6 +432,7 @@ $(document).ready(function () {
 
     // 恢复首次登陆
     $('.test8').on('click',function () {
+        $('.test8').css('color','red');
         localStorage.clear();
         window.location.href="index.html?time="+((new Date()).getTime());
     })

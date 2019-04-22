@@ -900,10 +900,27 @@ body section.pop.share_before > div > div > div > div > p {
   line-height: .5rem;
 }
 html section.pop.share_before > div > div > div > div > p:nth-child(1),
-body section.pop.share_before > div > div > div > div > p:nth-child(1) {
+body section.pop.share_before > div > div > div > div > p:nth-child(1),
+html section.pop.share_before > div > div > div > div > p:nth-child(2),
+body section.pop.share_before > div > div > div > div > p:nth-child(2) {
   font-size: .32rem;
-  margin-bottom: .5rem;
   color: #932322;
+}
+html section.pop.share_before > div > div > div > div > p:nth-child(2),
+body section.pop.share_before > div > div > div > div > p:nth-child(2) {
+  margin-bottom: .5rem;
+  display: flex;
+  align-items: center;
+}
+html section.pop.share_before > div > div > div > div > p:nth-child(2) > img,
+body section.pop.share_before > div > div > div > div > p:nth-child(2) > img {
+  width: .6rem;
+}
+html section.pop.share_before > div > div > div > div > p:nth-child(5) > span,
+body section.pop.share_before > div > div > div > div > p:nth-child(5) > span {
+  font-size: .32rem;
+  color: #932322;
+  font-weight: bolder;
 }
 html section.pop.share_before > a,
 body section.pop.share_before > a {
@@ -1639,4 +1656,7 @@ section.loader > div:nth-child(2) div {
 .fontsize {
   font-size: .28rem;
   font-weight: bolder;
+}
+.clickios {
+  cursor: pointer;
 }
