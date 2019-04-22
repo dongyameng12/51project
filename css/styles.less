@@ -33,6 +33,16 @@ html,body{
                     background-size: cover; 
                     margin: 0 auto;
                     position: relative;
+                    >div{
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        width: 6rem;
+                        height: 5.9rem;
+                        background: url('../images/home_03_01.png') no-repeat;
+                        background-size: cover; 
+                        bottom: .5rem;
+                    }
                     >a{
                         position: absolute;
                         left: 0;
@@ -936,7 +946,7 @@ html,body{
             // 分享
             &.share{
                 display: none;
-                top: .39rem;
+                top: 0rem;
                 >div{
                     &:nth-child(1){
                         position: relative;
@@ -980,6 +990,7 @@ html,body{
                                             margin: .2rem 0;
                                             display: flex;
                                             align-items: center;
+                                            padding-left: .5rem;
                                           >span{
                                               display: inline-block;
                                             overflow: hidden;
@@ -1093,8 +1104,21 @@ html,body{
                                         font-size: .24rem;
                                         line-height: .5rem;
                                         text-align: center;
-                                        >img{
-                                            width: 4.27rem;
+                                        &:nth-child(1){
+                                            >img{
+                                                width: 4.27rem;
+                                            }
+                                        }
+                                        &:nth-child(4){
+                                            margin-top: .5rem;
+                                        }
+                                        &:nth-child(6){
+                                            >span{
+                                                font-size: .32rem;
+                                                color: #932322;
+                                                font-weight: bolder;
+                                            }
+                                          
                                         }
                                     }
                                 }

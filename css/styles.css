@@ -40,6 +40,17 @@ body section.home > div:nth-child(2) {
   margin: 0 auto;
   position: relative;
 }
+html section.home > div:nth-child(2) > div,
+body section.home > div:nth-child(2) > div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 6rem;
+  height: 5.9rem;
+  background: url('../images/home_03_01.png') no-repeat;
+  background-size: cover;
+  bottom: .5rem;
+}
 html section.home > div:nth-child(2) > a,
 body section.home > div:nth-child(2) > a {
   position: absolute;
@@ -938,7 +949,7 @@ body section.pop.share_before > a {
 html section.pop.share,
 body section.pop.share {
   display: none;
-  top: .39rem;
+  top: 0rem;
 }
 html section.pop.share > div:nth-child(1),
 body section.pop.share > div:nth-child(1) {
@@ -982,6 +993,7 @@ body section.pop.share > div:nth-child(2) > div > div > div > div:nth-child(2) >
   margin: .2rem 0;
   display: flex;
   align-items: center;
+  padding-left: .5rem;
 }
 html section.pop.share > div:nth-child(2) > div > div > div > div:nth-child(2) > p > span,
 body section.pop.share > div:nth-child(2) > div > div > div > div:nth-child(2) > p > span {
@@ -1101,9 +1113,19 @@ body section.pop.unling > div:nth-child(1) > div > div > div > p {
   line-height: .5rem;
   text-align: center;
 }
-html section.pop.unling > div:nth-child(1) > div > div > div > p > img,
-body section.pop.unling > div:nth-child(1) > div > div > div > p > img {
+html section.pop.unling > div:nth-child(1) > div > div > div > p:nth-child(1) > img,
+body section.pop.unling > div:nth-child(1) > div > div > div > p:nth-child(1) > img {
   width: 4.27rem;
+}
+html section.pop.unling > div:nth-child(1) > div > div > div > p:nth-child(4),
+body section.pop.unling > div:nth-child(1) > div > div > div > p:nth-child(4) {
+  margin-top: .5rem;
+}
+html section.pop.unling > div:nth-child(1) > div > div > div > p:nth-child(6) > span,
+body section.pop.unling > div:nth-child(1) > div > div > div > p:nth-child(6) > span {
+  font-size: .32rem;
+  color: #932322;
+  font-weight: bolder;
 }
 html section.pop.unling > div:nth-child(2),
 body section.pop.unling > div:nth-child(2) {
