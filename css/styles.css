@@ -389,10 +389,16 @@ body section.glory > div > div > div:nth-child(2) > p {
 }
 html section.glory > div > div > div:nth-child(2) > p:nth-child(1),
 body section.glory > div > div > div:nth-child(2) > p:nth-child(1) {
-  font-size: .34rem;
   font-weight: bolder;
-  width: 4.55rem;
-  margin: .2rem auto 0;
+  width: 2.6rem;
+  margin: .2rem 0 .1rem 0;
+  font-size: .34rem;
+  display: flex;
+  align-items: center;
+}
+html section.glory > div > div > div:nth-child(2) > p:nth-child(1) > span,
+body section.glory > div > div > div:nth-child(2) > p:nth-child(1) > span {
+  display: inline-block;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -928,8 +934,8 @@ body section.pop.share > div:nth-child(1) {
 }
 html section.pop.share > div:nth-child(1) > div,
 body section.pop.share > div:nth-child(1) > div {
-  width: 5.90rem;
-  height: 1.46rem;
+  width: 5.86rem;
+  height: 1.31rem;
   background: url('../images/share_01.png') no-repeat;
   background-size: cover;
   position: absolute;
@@ -955,8 +961,14 @@ html section.pop.share > div:nth-child(2) > div > div > div > div:nth-child(2) >
 body section.pop.share > div:nth-child(2) > div > div > div > div:nth-child(2) > p {
   font-size: .32rem;
   font-weight: bolder;
-  width: 4.55rem;
-  margin: .2rem auto;
+  width: 2.6rem;
+  margin: .2rem 0;
+  display: flex;
+  align-items: center;
+}
+html section.pop.share > div:nth-child(2) > div > div > div > div:nth-child(2) > p > span,
+body section.pop.share > div:nth-child(2) > div > div > div > div:nth-child(2) > p > span {
+  display: inline-block;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

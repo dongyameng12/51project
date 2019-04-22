@@ -22,70 +22,70 @@ var current_clickclass // 判断当前点击是哪个class
 // 劳模类型（女生）
 var modeltypeArr = [
     {
-        modeltypeImg : 'images/women_00.jpg',
+        modeltypeImg : 'images/00.jpg',
         introduction : '我是女生1'  
     },
     {
-        modeltypeImg : 'images/women_01.jpg',
+        modeltypeImg : 'images/01.jpg',
         introduction : '我是女生2'  
     },
     {
-        modeltypeImg : 'images/women_02.jpg',
+        modeltypeImg : 'images/02.jpg',
         introduction : '我是女生3'  
     },
     {
-        modeltypeImg : 'images/women_03.jpg',
+        modeltypeImg : 'images/03.jpg',
         introduction : '我是女生4'  
     },
     {
-        modeltypeImg : 'images/women_04.jpg',
+        modeltypeImg : 'images/04.jpg',
         introduction : '我是女生5'  
     },
     {
-        modeltypeImg : 'images/women_05.jpg',
+        modeltypeImg : 'images/05.jpg',
         introduction : '我是女生6'  
     },
     {
-        modeltypeImg : 'images/women_06.jpg',
+        modeltypeImg : 'images/06.jpg',
         introduction : '我是女生7'  
     },
     {
-        modeltypeImg : 'images/women_07.jpg',
+        modeltypeImg : 'images/07.jpg',
         introduction : '我是女生8'  
     },
 ];
 // 劳模类型（男生）
 var modelmenArr = [
     {
-        modeltypeImg : 'images/men_00.jpg',
+        modeltypeImg : 'images/08.jpg',
         introduction : '我是男生1'  
     },
     {
-        modeltypeImg : 'images/men_01.jpg',
+        modeltypeImg : 'images/09.jpg',
         introduction : '我是男生2'  
     },
     {
-        modeltypeImg : 'images/men_02.jpg',
+        modeltypeImg : 'images/10.jpg',
         introduction : '我是男生3'  
     },
     {
-        modeltypeImg : 'images/men_03.jpg',
+        modeltypeImg : 'images/11.jpg',
         introduction : '我是男生4'  
     },
     {
-        modeltypeImg : 'images/men_04.jpg',
+        modeltypeImg : 'images/12.jpg',
         introduction : '我是男生5'  
     },
     {
-        modeltypeImg : 'images/men_05.jpg',
+        modeltypeImg : 'images/13.jpg',
         introduction : '我是男生6'  
     },
     {
-        modeltypeImg : 'images/men_06.jpg',
+        modeltypeImg : 'images/14.jpg',
         introduction : '我是男生7'  
     },
     {
-        modeltypeImg : 'images/men_07.jpg',
+        modeltypeImg : 'images/15.jpg',
         introduction : '我是男生8'  
     },
 ];
@@ -261,10 +261,6 @@ $(document).ready(function () {
         generateImage()
     });
     // 点击分享
-    // $('.share').on('click',function(){
-    //     hideMask();
-    //     $('.share').hide();
-    // })
     $('.mask').on('click',function(){
         if ($('.share').css('display') == 'block') {
             hideMask();
