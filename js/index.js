@@ -208,6 +208,7 @@ $(document).ready(function () {
                 if (CM) {
                     //本网中流量 
                     showMask();
+                    // 链接
                     $('.tc-1').show();
                 } else {
                     //异网中流量 
@@ -282,6 +283,16 @@ $(document).ready(function () {
                 $('.unling').show();
             } else {
                 current_clickclass = '.one_flower'
+                // 跳转链接本网
+                // 测试用（选择两者中的一个链接）
+                var cmaimg = true;
+                if (cmaimg) {
+                    $('#cm_aimg').css('background-image','url(images/cq_qita.gif)').attr('href','https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx7858699aca01b75f&redirect_uri=http%3A%2F%2Fserviceimg.bmcc.com.cn%2Fweixin%2Fredirect%2FdispenseRequest.action&response_type=code&scope=snsapi_base&state=cxbxl2018072#wechat_redirect');    
+                } else {
+                    $('#cm_aimg').css('background-image','url(images/cm_10GB.gif)').attr('href','http://open.weixin.qq.com/connect/oauth2/authorize?appid=wx7858699aca01b75f&redirect_uri=http%3A%2F%2Fserviceimg.bmcc.com.cn%2Fweixin%2Fredirect%2FdispenseRequest.action&response_type=code&scope=snsapi_base&state=hxyhq10Y#wechat_redirect'); 
+                }
+                // 跳转异网
+                $('#yi_aimg').css('background-image','url(images/cm_yidongw.gif)').attr('href',' https://service.bj.10086.cn/m/num/num/commonNum/showFontPage.action?busiCode=YDWKXCX');
                 jiangli();
             }
         }else if ($(this).hasClass('five_flower')) {
@@ -291,6 +302,10 @@ $(document).ready(function () {
                 $('.unling').show();
             } else {
                 current_clickclass = '.five_flower'
+                // 跳转链接本网
+                $('#cm_aimg').css('background-image','url(images/cm_yidongw.gif)').attr('href',' https://service.bj.10086.cn/m/num/num/commonNum/showFontPage.action?busiCode=YDWKXCX'); 
+                // 跳转异网
+                $('#yi_aimg').css('background-image','url(images/yi_wuxian.gif)').attr('href','  https://service.bj.10086.cn/m/num/num/commonNum/showFontPage.action?busiCode=WXKWTYW')
                 jiangli()
             }
         }else if ($(this).hasClass('eight_flower')) {
@@ -300,6 +315,10 @@ $(document).ready(function () {
                 $('.unling').show();
             } else {
                 current_clickclass = '.eight_flower'
+                 // 跳转链接本网
+                 $('#cm_aimg').css('background-image','url(images/cm_handt.gif)').attr('href','https://mp.weixin.qq.com/s/CtHh-Ea6txKdcEu_7zeHPA'); 
+                 // 跳转异网
+                 $('#yi_aimg').css('background-image','url(images/yi_kuandai.png)').attr('href','http://service.bj.10086.cn/m/p/kdzq/weixinyiwang/')
                 jiangli()
             }
         }

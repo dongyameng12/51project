@@ -9,63 +9,69 @@
     <link rel="stylesheet" href="css/reset.min.css">
     <!-- <link rel="stylesheet/less" href="css/styles.less"> -->
     <link rel="stylesheet" href="css/styles.css">
-    <!-- <script src="js/less-1.7.0.min.js"></script> -->   
+    <!-- <script src="js/less-1.7.0.min.js"></script> -->
     <script src="js/jquery-1.10.1.min.js"></script>
     <script src="js/imgLoader.js"></script>
     <script>
-       imgLoader([
-       'images/bg_01.png',
-       'images/bg_02.png',
-       'images/bind_01.png',
-       'images/bind_02.jpg',
-       'images/bind_03.png',
-       'images/enter_01.png',
-       'images/enter_02.png',
-       'images/enter_03.png',
-       'images/firend_02.png',
-       'images/flower_hui.png',
-       'images/flower_red.png',
-       'images/friend_01.png',
-       'images/glory_01.png',
-       'images/glory_02.png',
-       'images/guanggo_01.png',
-       'images/home_01.png',
-       'images/home_02.png',
-       'images/home_03.png',
-       'images/home_03_01.png',
-       'images/main_01.png',
-       'images/main_02.png',
-       'images/main_banner.gif',
-       'images/main_biao.png',
-       'images/main_btn.png',
-       'images/main_btnh.png',
-       'images/mainflower_01.png',
-       'images/mainflower_02.png',
-       'images/mainflower_03.png',
-       'images/modeltype_01.png',
-       'images/00.jpg',
-       'images/01.jpg',
-       'images/02.jpg',
-       'images/03.jpg',
-       'images/04.jpg',
-       'images/05.jpg',
-       'images/06.jpg',
-       'images/07.jpg',
-       'images/08.jpg',
-       'images/09.jpg',
-       'images/10.jpg',
-       'images/11.jpg',
-       'images/12.jpg',
-       'images/13.jpg',
-       'images/14.jpg',
-       'images/15.jpg',
-       'images/return.png',
-       'images/rule_bg.png',
-       'images/rule.png',
-       'images/share_01.png',
-       'images/start.png',
-       'images/tc_03.png',
-       'images/share_01.png'
+        imgLoader([
+            'images/bg_01.png',
+            'images/bg_02.png',
+            'images/bind_01.png',
+            'images/bind_02.jpg',
+            'images/bind_03.png',
+            'images/enter_01.png',
+            'images/enter_02.png',
+            'images/enter_03.png',
+            'images/firend_02.png',
+            'images/flower_hui.png',
+            'images/flower_red.png',
+            'images/friend_01.png',
+            'images/glory_01.png',
+            'images/glory_02.png',
+            'images/guanggo_01.png',
+            'images/home_01.png',
+            'images/home_02.png',
+            'images/home_03.png',
+            'images/home_03_01.png',
+            'images/main_01.png',
+            'images/main_02.png',
+            'images/main_banner.gif',
+            'images/main_biao.png',
+            'images/main_btn.png',
+            'images/main_btnh.png',
+            'images/mainflower_01.png',
+            'images/mainflower_02.png',
+            'images/mainflower_03.png',
+            'images/modeltype_01.png',
+            'images/00.jpg',
+            'images/01.jpg',
+            'images/02.jpg',
+            'images/03.jpg',
+            'images/04.jpg',
+            'images/05.jpg',
+            'images/06.jpg',
+            'images/07.jpg',
+            'images/08.jpg',
+            'images/09.jpg',
+            'images/10.jpg',
+            'images/11.jpg',
+            'images/12.jpg',
+            'images/13.jpg',
+            'images/14.jpg',
+            'images/15.jpg',
+            'images/return.png',
+            'images/rule_bg.png',
+            'images/rule.png',
+            'images/share_01.png',
+            'images/start.png',
+            'images/tc_03.png',
+            'images/cq_qita.gif',
+            'images/cm_10GB.gif',
+            'images/cm_yidongw.gif',
+            'images/yi_wuxian.gif',
+            'images/cm_handt.gif',
+            'images/yi_kuandai.png',
+            'images/share_01.png'
         ], function (percentage) {
             var percentT = percentage * 100;
             $('.loader_info').html('Loading ' + (parseInt(percentT)) + '%');
@@ -79,8 +85,8 @@
 </head>
 
 <body>
-     <!--loading-->
-     <section class="loader">
+    <!--loading-->
+    <section class="loader">
         <div class="loader_info"></div>
         <div>
             <div class="loader_progress"></div>
@@ -94,10 +100,11 @@
                 <div>
                     <div>
                         <div>
-                            <p>您的好友 <span>xx</span>，邀请您为TA点亮一朵小花</p>
+                            <p>您的好友
+                                <span>xx</span>，邀请您为TA点亮一朵小花</p>
                             <p> 就有机会获得最高5.1GB的流量哦～</p>
                         </div>
-                        <div> 
+                        <div>
                             <a href="javascript:void(0);" id="send"></a>
                             <a href="javascript:void(0);" class="go_rule"></a>
                         </div>
@@ -105,7 +112,7 @@
                 </div>
             </div>
         </div>
-      
+
     </section>
     <!-- 好友点亮窗口 -->
     <section class="pop send_fri">
@@ -113,7 +120,9 @@
             <div>
                 <div>
                     <img src="./images/main_02.png" alt="">
-                    <p>成功为好友<span>xx</span> </p>
+                    <p>成功为好友
+                        <span>xx</span>
+                    </p>
                     <p>点亮了一朵小花</p>
                     <p></p>
                 </div>
