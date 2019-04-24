@@ -790,11 +790,25 @@ html section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(1) > 
 body section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(1) > div:nth-child(1) {
   font-size: .34rem;
   color: #393939;
-  margin-bottom: 1.3rem;
+  margin-bottom: 1rem;
 }
 html section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(1) > div:nth-child(2) > p,
 body section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(1) > div:nth-child(2) > p {
   line-height: .8rem;
+}
+html section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(1) > div:nth-child(2) > p:nth-child(1),
+body section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(1) > div:nth-child(2) > p:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(1) > div:nth-child(2) > p:nth-child(1) > span,
+body section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(1) > div:nth-child(2) > p:nth-child(1) > span {
+  display: inline-block;
+  width: 2rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 html section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(2),
 body section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(2) {
