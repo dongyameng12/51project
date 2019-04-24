@@ -171,7 +171,7 @@ $(document).ready(function () {
         // }
         str = " <img src='"+sextArr[women_number].modeltypeImg +"'>";
         // str_list =" <p><span>"+nickname+"</span></p><img src='"+sextArr[women_number].modeltypeImg +"'>"
-        str_share = " <p><span>"+nickname+"</span>是</p><img src='"+sextArr[women_number].modeltypeImg +"'>";
+        str_share = " <p><span>"+nickname+"</span><span> 被评为</span></p><img src='"+sextArr[women_number].modeltypeImg +"'>";
         $('.model_detail').html(str);
         $('.share_detail').html(str_share);
     }

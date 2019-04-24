@@ -13,21 +13,21 @@
     (document, window);
 
 $(document).ready(function () {
-//送她一朵小花
-$('#send').on('click',function(){
-    showMask();
-    $('.send_fri').show();
-});
- // 活动规则
- $('.go_rule').on('click',function(){
-    $('.fri_home').hide();
-    $('.rule').show();
-});
-// 活动规则确定
-$('.rule_close').on('click',function(){
-    $('.rule').hide();
-    $('.fri_home').show();
-});
+    //送她一朵小花
+    $('#send').on('click', function () {
+        showMask();
+        $('.send_fri').show();
+    });
+    // 活动规则
+    $('.go_rule').on('click', function () {
+        showMask();
+        $('.rule').show();
+    });
+    // 活动规则确定
+    $('.rule_close').on('click', function () {
+        $('.rule').hide();
+        hideMask();
+    });
 });
 //显示遮罩层
 function showMask() {
