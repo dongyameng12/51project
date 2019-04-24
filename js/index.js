@@ -161,7 +161,6 @@ $(document).ready(function () {
     
     // 展示劳模类型
     function showModel (sextArr) { 
-        // women_number = parseInt(Math.random()*7);
         var str = '';
         var str_share = '';
         var nickname = $('.name').val();
