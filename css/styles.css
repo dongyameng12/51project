@@ -416,19 +416,6 @@ body section.glory > div > div > div:nth-child(2) > p:nth-child(1) {
   align-items: center;
   margin: .1rem auto;
 }
-html section.glory > div > div > div:nth-child(2) > p:nth-child(1) > span:nth-child(1),
-body section.glory > div > div > div:nth-child(2) > p:nth-child(1) > span:nth-child(1) {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  text-align: right;
-  flex: 1;
-}
-html section.glory > div > div > div:nth-child(2) > p:nth-child(1) > span:nth-child(2),
-body section.glory > div > div > div:nth-child(2) > p:nth-child(1) > span:nth-child(2) {
-  flex: 1;
-}
 html section.glory > div > div > div:nth-child(3),
 body section.glory > div > div > div:nth-child(3) {
   padding: .2rem 0;
@@ -1030,19 +1017,6 @@ body section.pop.share > div:nth-child(2) > div > div > div > div:nth-child(2) >
   align-items: center;
   padding-left: .5rem;
   box-sizing: border-box;
-}
-html section.pop.share > div:nth-child(2) > div > div > div > div:nth-child(2) > p > span:nth-child(1),
-body section.pop.share > div:nth-child(2) > div > div > div > div:nth-child(2) > p > span:nth-child(1) {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  flex: 1;
-  text-align: right;
-}
-html section.pop.share > div:nth-child(2) > div > div > div > div:nth-child(2) > p > span:nth-child(2),
-body section.pop.share > div:nth-child(2) > div > div > div > div:nth-child(2) > p > span:nth-child(2) {
-  flex: 1;
 }
 html section.pop.share > div:nth-child(2) > div > div > div > div:nth-child(2) > img,
 body section.pop.share > div:nth-child(2) > div > div > div > div:nth-child(2) > img {

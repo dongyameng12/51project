@@ -164,7 +164,7 @@ $(document).ready(function () {
         // women_number = parseInt(Math.random()*7);
         var str = '';
         var str_share = '';
-        var nickname = $('.name').val();
+        var nickname = $('.name').val().substring(0,6)+'......';
         // utf16toEntities(nickname);
         // for(i = 0; i<modeltypeArr.length;  i++){
         //     str = " <p><span>"+"小胖胖"+"</span>是</p><img src='"+modeltypeArr[i].modeltypeImg +"'><p>"+modeltypeArr[i].introduction+"</p>"
