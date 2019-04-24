@@ -164,13 +164,12 @@ $(document).ready(function () {
         // women_number = parseInt(Math.random()*7);
         var str = '';
         var str_share = '';
-        var nickname = $('.name').val().substring(0,6)+'......';
-        // utf16toEntities(nickname);
-        // for(i = 0; i<modeltypeArr.length;  i++){
-        //     str = " <p><span>"+"小胖胖"+"</span>是</p><img src='"+modeltypeArr[i].modeltypeImg +"'><p>"+modeltypeArr[i].introduction+"</p>"
-        // }
+        var nickname = $('.name').val();
+        if(nickname.length>6) {
+            //方法：截取6个字符，之后的用省略号拼接~~~
+            nickname = $('.name').val().substring(0,6)+'...'
+        }
         str = " <img src='"+sextArr[women_number].modeltypeImg +"'>";
-        // str_list =" <p><span>"+nickname+"</span></p><img src='"+sextArr[women_number].modeltypeImg +"'>"
         str_share = " <p><span>"+nickname+"</span><span> 被评为</span></p><img src='"+sextArr[women_number].modeltypeImg +"'>";
         $('.model_detail').html(str);
         $('.share_detail').html(str_share);
