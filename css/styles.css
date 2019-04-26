@@ -1040,10 +1040,6 @@ body section.pop.share > div:nth-child(2) > div > div > div > div:nth-child(3) >
   font-size: .24rem;
   font-weight: bolder;
 }
-html section.pop.share > div:nth-child(2) > div > div > div > div:nth-child(3) > div:nth-child(1) > p,
-body section.pop.share > div:nth-child(2) > div > div > div > div:nth-child(3) > div:nth-child(1) > p {
-  line-height: .45rem;
-}
 html section.pop.share > div:nth-child(3),
 body section.pop.share > div:nth-child(3) {
   font-size: .28rem;
@@ -1691,8 +1687,8 @@ section.loader > div:nth-child(2) div {
   background-color: #f9d0a3;
 }
 #qrcode img {
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 1.13rem;
+  height: 1.13rem;
 }
 #attention_code img {
   width: 3.8rem;
