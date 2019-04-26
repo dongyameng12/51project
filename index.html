@@ -81,12 +81,7 @@
                 $('.loader').remove();
                 var islogin = localStorage.getItem('islogin')
                 if (islogin != null) {
-                    if (getQueryVariable('test') != 1) {
-                        $('.home').hide()
-                        $('.glory').show()
-                    } else {
-                        $('.home').show()
-                    }
+                    $('.home').show()
                 } else {
                     $('.home').show()
                     localStorage.setItem('islogin',1)
