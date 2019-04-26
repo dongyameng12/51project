@@ -10,7 +10,8 @@
     win.addEventListener(resizeEvt, recalc, false);
     doc.addEventListener('DOMContentLoaded', recalc, false);
 })
-(document, window);
+    (document, window);
+
 $(document).ready(function () {
     //送她一朵小花
     $('#send').on('click', function () {
