@@ -12,14 +12,9 @@
 })
     (document, window);
 
-
-    var winHeight = $(window).height();
-    $(window).resize(function() {
-        var thisHeight = $(this).height();
-        var keyboardHeight = thisHeight - winHeight;
-        $(".enter").css({ 'bottom': keyboardHeight + 'px' });
-    });
-
+$('.name').on('blur',function () {
+    window.scroll(0,0)
+})
 /**
 * 
 变量展示区
