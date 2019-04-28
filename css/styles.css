@@ -74,11 +74,11 @@ body section.home:nth-child(3) {
 html section.enter,
 body section.enter {
   display: none;
+  position: absolute;
   width: 7.5rem;
   height: 100%;
   background: url('../images/home_01.png') no-repeat;
   background-size: cover;
-  position: relative;
   box-sizing: border-box;
 }
 html section.enter > div:nth-child(1),
