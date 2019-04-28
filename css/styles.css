@@ -4,8 +4,6 @@ body {
   height: 100%;
   color: #333;
   user-select: none;
-  position: fixed;
-  top: 0;
   /* 遮罩层 */
 }
 html input,
@@ -80,9 +78,8 @@ body section.enter {
   height: 100%;
   background: url('../images/home_01.png') no-repeat;
   background-size: cover;
+  position: relative;
   box-sizing: border-box;
-  position: fixed;
-  top: 0;
 }
 html section.enter > div:nth-child(1),
 body section.enter > div:nth-child(1) {
@@ -90,7 +87,7 @@ body section.enter > div:nth-child(1) {
   height: 100%;
   background: url('../images/home_03.png') no-repeat;
   background-size: cover;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 1;
 }
