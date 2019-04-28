@@ -10,6 +10,7 @@
     win.addEventListener(resizeEvt, recalc, false);
     doc.addEventListener('DOMContentLoaded', recalc, false);
 })(document, window);
+
 var winHeight = $(window).height();
 $(window).resize(function() {
     var thisHeight = $(this).height();
