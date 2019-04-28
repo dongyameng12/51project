@@ -11,7 +11,7 @@
     doc.addEventListener('DOMContentLoaded', recalc, false);
 })
     (document, window);
-    
+// ios点击事件不触发
 $(function() {  
     FastClick.attach(document.body);  
 })
@@ -267,7 +267,7 @@ $(document).ready(function () {
     $('.shareb_btn').on('click',function(){
         $('.share_before').hide();
         $('.share').show();
-        generateImage()
+        // generateImage()
     });
     // 点击分享
     $('.mask').on('click',function(){

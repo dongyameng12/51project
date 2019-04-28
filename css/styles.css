@@ -793,14 +793,6 @@ body section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(1) > 
   align-items: center;
   justify-content: center;
 }
-html section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(1) > div:nth-child(2) > p:nth-child(1) > span,
-body section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(1) > div:nth-child(2) > p:nth-child(1) > span {
-  display: inline-block;
-  width: 2rem;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
 html section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(2),
 body section.fri_home > div:nth-child(2) > div > div > div > div:nth-child(2) {
   width: 7.06rem;
@@ -981,15 +973,15 @@ html section.pop.share > div:nth-child(1),
 body section.pop.share > div:nth-child(1) {
   position: relative;
   width: 5.5rem;
-  height: 1.7rem;
+  height: 1.3rem;
   left: 0;
   right: 0;
   margin: auto;
 }
 html section.pop.share > div:nth-child(1) > div,
 body section.pop.share > div:nth-child(1) > div {
-  width: 5.86rem;
-  height: 1.31rem;
+  width: 5.85rem;
+  height: 1.02rem;
   background: url('../images/share_01.png') no-repeat;
   background-size: cover;
   position: absolute;

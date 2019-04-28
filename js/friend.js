@@ -13,6 +13,13 @@
     (document, window);
 
 $(document).ready(function () {
+    var name_friend = $('#namefriend').text();
+    if(name_friend.length>6) {
+        //方法：截取6个字符，之后的用省略号拼接~~~
+        name_friend = $('#namefriend').text().substring(0,6)+'...';
+        $('#namefriend').text(name_friend)
+    }
+    
     //送她一朵小花
     $('#send').on('click', function () {
         showMask();
