@@ -81,11 +81,11 @@
                 $('.loader').remove();
                 var islogin = localStorage.getItem('islogin')
                 if (islogin != null) {
-                    if (getQueryVariable('test')) {
-                        $('.home').show()
-                    } else {
+                    if (getQueryVariable('test') != 1) {
                         $('.home').hide()
                         $('.glory').show()
+                    } else {
+                        $('.home').show()
                     }
                 } else {
                     $('.home').show()
@@ -405,8 +405,8 @@
                         </div>
                         <div>
                             <div>  
-                                <p>快来测测你是哪个类型</p>
-                                <p>的劳动人民吧～</p>
+                                <p>快来看看你被评为</p>
+                                <p>哪个劳模称号吧～</p>
                                 <p>最高赢取5.1GB流量哦！</p>
                             </div>
                             <div id="qrcode"></div>
