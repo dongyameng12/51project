@@ -1709,3 +1709,6 @@ section.loader > div:nth-child(2) div {
 .clickios {
   cursor: pointer;
 }
+* {
+  touch-action: pan-y;
+}

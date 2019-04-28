@@ -11,10 +11,16 @@
     doc.addEventListener('DOMContentLoaded', recalc, false);
 })
     (document, window);
+    
+$(function() {  
+    FastClick.attach(document.body);  
+})
 
+// 软键盘顶起来解决问题
 $('.name').on('blur',function () {
     window.scroll(0,0)
 })
+
 /**
 * 
 变量展示区
@@ -93,6 +99,7 @@ var modelmenArr = [
     },
 ];
 $(document).ready(function () {
+    
     //是否关注公众号
     var attention = true;
     // 是否绑定手机号
