@@ -103,6 +103,7 @@ $(document).ready(function () {
     // 点击首页开始按钮
     $('#start').on('click',function(){
         $('.home').hide();
+        $(".enter").css("height", $(document).height());
         $('.enter').show();
     });
     // 选择
