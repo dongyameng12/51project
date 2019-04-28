@@ -9,14 +9,8 @@
     if (!doc.addEventListener) return;
     win.addEventListener(resizeEvt, recalc, false);
     doc.addEventListener('DOMContentLoaded', recalc, false);
-})(document, window);
-
-// var winHeight = $(window).height();
-// $(window).resize(function() {
-//     var thisHeight = $(this).height();
-//     var keyboardHeight = thisHeight - winHeight;
-//     $(".enter").css({ 'bottom': keyboardHeight + 'px' });
-// });
+})
+    (document, window);
 
 /**
 * 
