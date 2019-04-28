@@ -1,5 +1,6 @@
 html,
 body {
+  position: relative;
   background-color: #f9d0a3;
   height: 100%;
   color: #333;
@@ -75,6 +76,7 @@ html section.enter,
 body section.enter {
   display: none;
   position: absolute;
+  bottom: 0;
   width: 7.5rem;
   height: 100%;
   background: url('../images/home_01.png') no-repeat;
