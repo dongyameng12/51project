@@ -568,9 +568,19 @@
     <!-- 遮罩层 -->
     <section class="mask" id="mask"></section>
     <script>
-        new QRCode(document.getElementById("qrcode"), "http://www.baidu.com");
-        $('#qrcode img').css({width:'1.8rem',height:'1.8rem'})
-        // document.getElementById("qrcode").qrcode({width:200,height:200});
+        function erweima() {
+                var link = "http://www.baidu.com"     //其中link为需生成二维码的链接
+                var qrcode = new QRCode("qrcode", {
+                    text: link,
+                    width: 100,
+                    height: 100,
+                    colorDark: "pink",
+                    colorLight: "#ffffff",
+                    correctLevel: QRCode.CorrectLevel.H
+                });
+            }
+            erweima();
+       // new QRCode(document.getElementById("qrcode"), "http://www.baidu.com");
     </script>
 </body>
 
