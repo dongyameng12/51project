@@ -5,7 +5,6 @@ body {
   height: 100%;
   color: #333;
   user-select: none;
-  font-size: 62.5%;
   /* 遮罩层 */
 }
 html input,
