@@ -1686,6 +1686,10 @@ section.loader > div:nth-child(2) div {
   border-radius: .4em;
   background-color: #f9d0a3;
 }
+#qrcode {
+  width: 1.8rem;
+  height: 1.8rem;
+}
 #qrcode img {
   width: 1.8rem !important;
   height: 1.8rem !important;
