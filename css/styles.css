@@ -1690,10 +1690,6 @@ section.loader > div:nth-child(2) div {
   width: 1.8rem;
   height: 1.8rem;
 }
-#qrcode img {
-  width: 1.8rem !important;
-  height: 1.8rem !important;
-}
 #attention_code img {
   width: 3.8rem;
   height: 3.8rem;
