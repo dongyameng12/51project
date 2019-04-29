@@ -118,16 +118,6 @@ body section.enter > div:nth-child(2) > div {
   justify-content: space-between;
   align-items: center;
 }
-html section.enter > div:nth-child(2) > div .name,
-body section.enter > div:nth-child(2) > div .name {
-  width: 4.77rem;
-  height: .83rem;
-  font-size: .24rem;
-  line-height: .83rem;
-  background: #203f84;
-  border: 0;
-  padding: 0 .2rem;
-}
 html section.enter > div:nth-child(2) > div > a,
 body section.enter > div:nth-child(2) > div > a {
   display: inline-block;
