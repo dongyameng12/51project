@@ -18,14 +18,14 @@ $(function() {
     FastClick.attach(document.body);  
 })
 // 输入法聚焦
-$('.name').on('focus',function () {
-    var bodyname = document.querySelector('.name');
-    bodyname.scrollTop = bodyname.scrollHeight; 
-})
+// $('.name').on('focus',function () {
+//     var bodyname = document.querySelector('.name');
+//     bodyname.scrollTop = bodyname.scrollHeight; 
+// })
 // 软键盘顶起来解决问题
-$('.name').on('blur',function () {
-    window.scroll(0,0)
-})
+// $('.name').on('blur',function () {
+//     window.scroll(0,0)
+// })
 
 /**
 * 
@@ -133,34 +133,43 @@ $(document).ready(function () {
     })   
     // 去测试
     $('#start_test').on('click',function(){
-        var name = $('.name').val()
         var selected_status = $('.select_radio').length;
-        submitForm(name,selected_status);
+        submitForm(selected_status);
     });
     var sex
     // 用户填信息
-    function submitForm (name,selected_status) {
-        if (name !== '' && selected_status === 1) {
+    // function submitForm (name,selected_status) {
+    //     if (name !== '' && selected_status === 1) {
+    //         sex = $('.select_radio').parent('div').siblings('label').text();
+    //         showCard(sex)
+    //     } else {
+    //         if (name === '' && selected_status === 0) {
+    //             $('.prompt').text('您还没有填写姓名和性别');
+    //             showMask();
+    //             $('.sex_name').show();
+    //             // console.log('没有填写姓名和选择性别')
+    //         } else {
+    //             if (name === '') {
+    //                 $('.prompt').text('您还没有填写姓名');
+    //                 showMask();
+    //                 $('.sex_name').show();
+    //                 // console.log('没有填写姓名')
+    //             } else {
+    //                 $('.prompt').text('您还没有选择性别');
+    //                 showMask();
+    //                 $('.sex_name').show();
+    //             }
+    //         }
+    //     }
+    // }
+    function submitForm(selected_status) {
+        if (selected_status === 1) {
             sex = $('.select_radio').parent('div').siblings('label').text();
             showCard(sex)
         } else {
-            if (name === '' && selected_status === 0) {
-                $('.prompt').text('您还没有填写姓名和性别');
-                showMask();
-                $('.sex_name').show();
-                // console.log('没有填写姓名和选择性别')
-            } else {
-                if (name === '') {
-                    $('.prompt').text('您还没有填写姓名');
-                    showMask();
-                    $('.sex_name').show();
-                    // console.log('没有填写姓名')
-                } else {
-                    $('.prompt').text('您还没有选择性别');
-                    showMask();
-                    $('.sex_name').show();
-                }
-            }
+            $('.prompt').text('您还没有选择性别');
+            showMask();
+            $('.sex_name').show();
         }
     }
     // 卡片展示
@@ -179,10 +188,12 @@ $(document).ready(function () {
     function showModel (sextArr) { 
         var str = '';
         var str_share = '';
-        var nickname = $('.name').val();
+        // 调用微信名字（测试用）
+        var nickname = "显示微信昵称6个字符";
         if(nickname.length>6) {
             //方法：截取6个字符，之后的用省略号拼接~~~
-            nickname = $('.name').val().substring(0,6)+'...'
+            nickname = nickname.substring(0,6)+'...';
+            $('.name').text(nickname)
         }
         str = " <img src='"+sextArr[women_number].modeltypeImg +"'>";
         str_share = " <p><span>"+nickname+"</span><span> 被评为</span></p><img src='"+sextArr[women_number].modeltypeImg +"'>";
@@ -473,6 +484,8 @@ $(document).ready(function () {
 });
 // 生成图片方法
 function generateImage () {
+    // 调用生成二维码
+    erweima();
     var getimg_length = $('.getimg').children('img').length
     if (getimg_length == 0) {
         var copyDom = $('#pic')[0]
@@ -491,7 +504,18 @@ function generateImage () {
         })
     }
 }
-
+// 二维码
+function erweima() {
+    var link = "http://www.baidu.com"     //其中link为需生成二维码的链接
+    var qrcode = new QRCode("qrcode", {
+        text: link,
+        width: 100,
+        height: 100,
+        // colorDark: "pink",
+        // colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+    });
+}
 
 //显示遮罩层
 function showMask() {

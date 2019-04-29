@@ -126,7 +126,8 @@
         <div></div>
         <div>
             <div>
-                <input type="text" placeholder="请输入您的名字" class="name">
+                <!-- <input type="text" placeholder="请输入您的名字" class="name"> -->
+                <!-- <p class="name"></p> -->
                 <div class="radio_selected">
                     <div>
                         <div>
@@ -203,7 +204,7 @@
                 </div>
                 <div class="share_detail">
                     <p>
-                        <span>输入昵称</span>
+                        <span class="name">微信昵称</span>
                         <span> 被评为：</span> 
                     </p>
                     <img src="./images/00.jpg" alt="" srcset="">
@@ -399,7 +400,7 @@
                         </div>
                         <div class="share_detail">
                             <p>
-                                <span>输入昵称</span>
+                                <span class="name">微信昵称</span>
                                 <span>被评为：</span>
                             </p>
                             <img src="./images/00.jpg" alt="" srcset="">
@@ -567,21 +568,6 @@
     </section>
     <!-- 遮罩层 -->
     <section class="mask" id="mask"></section>
-    <script>
-        function erweima() {
-                var link = "http://www.baidu.com"     //其中link为需生成二维码的链接
-                var qrcode = new QRCode("qrcode", {
-                    text: link,
-                    width: 100,
-                    height: 100,
-                    // colorDark: "pink",
-                    // colorLight: "#ffffff",
-                    correctLevel: QRCode.CorrectLevel.H
-                });
-            }
-            erweima();
-       // new QRCode(document.getElementById("qrcode"), "http://www.baidu.com");
-    </script>
 </body>
 
 </html>
